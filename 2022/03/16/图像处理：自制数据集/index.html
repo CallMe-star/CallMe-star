@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://www.starclouds.top/2022/03/16/图像处理——特征点检测sift/"/>
+  <link rel="canonical" href="https://www.starclouds.top/2022/03/16/图像处理：自制数据集/"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,25 +20,25 @@
   <meta content="星云小站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1647518358954" as="style">
+  <link rel="preload" href="/css/style.css?time=1647526158800" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>理解边缘检测sift - 星云小站</title>
-  <meta name="keywords" content="图像处理笔记,null">
-  <meta name="description" content="图像处理——sift理解">
+  <title>自制神经网络数据集 - 星云小站</title>
+  <meta name="keywords" content="TensorFlow,null">
+  <meta name="description" content="将自己领域的数据生成数据包导入神经网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="理解边缘检测sift">
-<meta property="og:url" content="https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/index.html">
+<meta property="og:title" content="自制神经网络数据集">
+<meta property="og:url" content="https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/index.html">
 <meta property="og:site_name" content="星云小站">
-<meta property="og:description" content="图像处理——sift理解">
+<meta property="og:description" content="将自己领域的数据生成数据包导入神经网络">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.starclouds.top/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-03-16T12:03:43.253Z">
-<meta property="article:modified_time" content="2020-08-28T09:00:47.000Z">
+<meta property="article:published_time" content="2022-03-16T12:03:43.255Z">
+<meta property="article:modified_time" content="2020-10-17T07:12:10.000Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="图像处理笔记">
+<meta property="article:tag" content="TensorFlow">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.starclouds.top/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1628,8 +1628,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1647518358954" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1647518358954"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1647526158800" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1647526158800"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1700,9 +1700,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1647518358954","sites":"/js/plugins/sites.js?time=1647518358954","friends":"/js/plugins/friends.js?time=1647518358954","parallax":"/js/plugins/parallax.js?time=1647518358954","rightMenu":"/js/plugins/rightMenu.js?time=1647518358954","contributors":"/js/plugins/contributors.js?time=1647518358954","message":"/js/thirdparty/message.js?time=1647518358954","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1647518358954","search":"/js/search/hexo.js?time=1647518358954"},"css":{"style":"/css/style.css?time=1647518358954","message":"/css/message.css?time=1647518358954"}},
+    cdn: {"js":{"app":"/js/app.js?time=1647526158800","sites":"/js/plugins/sites.js?time=1647526158800","friends":"/js/plugins/friends.js?time=1647526158800","parallax":"/js/plugins/parallax.js?time=1647526158800","rightMenu":"/js/plugins/rightMenu.js?time=1647526158800","contributors":"/js/plugins/contributors.js?time=1647526158800","message":"/js/thirdparty/message.js?time=1647526158800","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1647526158800","search":"/js/search/hexo.js?time=1647526158800"},"css":{"style":"/css/style.css?time=1647526158800","message":"/css/message.css?time=1647526158800"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Thu Mar 17 2022 19:59:18 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Thu Mar 17 2022 22:09:18 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2522,7 +2522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/">
+  <link itemprop="mainEntityOfPage" href="https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="星云小站">
   </span>
@@ -2543,7 +2543,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        理解边缘检测sift
+        自制神经网络数据集
       </h1>
       <div class='new-meta-box'>
         
@@ -2562,10 +2562,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0/">图像处理笔记</a>
+    <a class="category-link" href="/categories/TensorFlow/">TensorFlow</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">图像处理笔记</span></a>
+        <a href="/categories/TensorFlow/" itemprop="url"><span itemprop="name">TensorFlow</span></a>
       </span>
     
   </div>
@@ -2599,114 +2599,47 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <blockquote>
-<p>图像处理——sift理解</p>
+<p>将自己领域的数据生成数据包导入神经网络</p>
 </blockquote>
 <span id="more"></span>
 
-<h3 id="通俗的大致理解"><a href="#通俗的大致理解" class="headerlink" title="通俗的大致理解"></a>通俗的大致理解</h3><ol>
-<li><p>首先，理解同一幅<strong>图像在不同的空间中有不同的表达方式</strong>。比如在RGB空间中，图像中的像素点可以用颜色值(r,g,b)来表示；在灰度空间中，图像中的像素点可以用灰度值来表示。类似的，你可以把梯度图像认为是图像在<strong>梯度空间</strong>中的一种表达，图像中的像素点可以<strong>用梯度方向</strong>来表示，即，梯度图像中的像素点表达的是该点的梯度方向（而不是灰度值&#x2F;颜色值）。</p>
-</li>
-<li><p>其次，理解图像的<strong>灰度直方图是什么</strong>。图像的灰度直方图就是把<strong>灰度图像中灰度值分别为0,1,…,255的像素的个数统计起来</strong>，得到的一个一维向量。类似的，图像的梯度直方图就是把<strong>梯度图像中梯度方向分别为0°到360°的像素的个数统计起来</strong>，得到一个一维向量。</p>
-</li>
+<h2 id="自制数据集并应用"><a href="#自制数据集并应用" class="headerlink" title="自制数据集并应用"></a>自制数据集并应用</h2><div class="story post-story"><p>在曹健老师的视频课程中有两种读入数据集的方法，一种是在线下载直接调用；一种是在本地自制数据集，用于自己本领域的数据处理。</p>
+<p>首先简单看一下在线读取数据的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">minist = tf.keras.datasets.mnist         <span class="comment">#导入数据集</span></span><br><span class="line">(x_train, y_train)，(x_test, y_test) = mnist.load_data()  <span class="comment">#分配训练集和测试集</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;x_train.shape:\n&#x27;</span>, x_train.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;y_train.shape:\n&#x27;</span>, y_train.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;x_test.shape:\n&#x27;</span>, x_test.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;y_test.shape:\n&#x27;</span>, y_test.shape)</span><br></pre></td></tr></table></figure>
+
+<h3 id="首先制作数据集"><a href="#首先制作数据集" class="headerlink" title="首先制作数据集"></a>首先制作数据集</h3><h4 id="①制作npy格式的本地数据集（label是txt形式）"><a href="#①制作npy格式的本地数据集（label是txt形式）" class="headerlink" title="①制作npy格式的本地数据集（label是txt形式）"></a>①制作npy格式的本地数据集（label是txt形式）</h4><p>在这个文件夹下放两个文件夹（一个训练集图片集和一个测试集图片集），和两个txt文件集，存放训练集和测试集所对应的标签。</p>
+<p>其中图片集中纯黑色用0表示，纯白色用255表示；</p>
+<p>两个txt文件中内容为：图片.jpg     label</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读入图像和标签</span></span><br><span class="line">train_path = (<span class="string">&#x27;绝对路径&#x27;</span>)</span><br><span class="line">train_txt = (<span class="string">&#x27;绝对路径&#x27;</span>)</span><br><span class="line"><span class="comment"># 存储npy数据包的位置</span></span><br><span class="line">x_train_savepath = (<span class="string">&#x27;绝对路径.npy&#x27;</span>)</span><br><span class="line">y_train_savepath = (<span class="string">&#x27;绝对路径.npy&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读入图像和标签</span></span><br><span class="line">test_path = (<span class="string">&#x27;绝对路径&#x27;</span>)</span><br><span class="line">test_txt = (<span class="string">&#x27;绝对路径&#x27;</span>)</span><br><span class="line"><span class="comment"># 存储npy数据包的位置</span></span><br><span class="line">x_test_savepath = (<span class="string">&#x27;绝对路径.npy&#x27;</span>)</span><br><span class="line">y_test_savepath = (<span class="string">&#x27;绝对路径.npy&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generateds</span>(<span class="params">path, txt</span>):</span><br><span class="line">  f = <span class="built_in">open</span>(txt, <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">  contents = f.readlines()</span><br><span class="line">  f.close()</span><br><span class="line">  x, y_ = [],[]</span><br><span class="line">  <span class="keyword">for</span> content <span class="keyword">in</span> contents:</span><br><span class="line">    value = content.split()</span><br><span class="line">    img_path = path + value[<span class="number">0</span>]</span><br><span class="line">    img = Image.<span class="built_in">open</span>(img_path)</span><br><span class="line">    img = np.array(img.convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line">    img = img / <span class="number">255</span></span><br><span class="line">    x.append(img)</span><br><span class="line">    y_.append(value[<span class="number">1</span>])</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;loading:&#x27;</span>, + content)</span><br><span class="line">    </span><br><span class="line">  x = np.array(x)</span><br><span class="line">  y_ = np.array(y_)</span><br><span class="line">  y_ = y_ astype(np.int64)</span><br><span class="line">  <span class="keyword">return</span> x, y_</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> os.path.exists(x_train_savepath) <span class="keyword">and</span> os.path.exists(y_train_savepath) <span class="keyword">and</span> os.path.exists(x_test_savepath) <span class="keyword">and</span> os.path.exists(y_test_savepath):</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;------------正在读取数据集---------------&#x27;</span>)</span><br><span class="line">  x_train_save = np.load(x_train_savepath)</span><br><span class="line">  y_train = np.save(y_train_savepath)</span><br><span class="line">  x_test_save = np.load(x_test_savepath)</span><br><span class="line">  y_test = np.load(y_test_savcvepath)</span><br><span class="line">  x_train = np.reshape(x_train_save, <span class="built_in">len</span>(x_train_save),<span class="number">28</span>, <span class="number">28</span>)</span><br><span class="line">  x_test = np.reshape(x_tet_save, <span class="built_in">len</span>(x_test_save),<span class="number">28</span>, <span class="number">28</span>)</span><br><span class="line">  </span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;------------生成矩阵中--------------&#x27;</span>)</span><br><span class="line">    x_train， y_train = generateds(train_path, train_txt)</span><br><span class="line">    x_test, y_test = generateds(test_path, test_txt)</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;----------生成数据集中------------&#x27;</span>)</span><br><span class="line">    x_train_save = np.reshape(x_train, <span class="built_in">len</span>(x_train),-<span class="number">1</span>)</span><br><span class="line">    x_test_save = np.reshape(x_test, <span class="built_in">len</span>(x_test), -<span class="number">1</span>) </span><br><span class="line">    np.save(x_train_savepath, x_train_save)</span><br><span class="line">    np.save(y_train_savepath, y_train)</span><br><span class="line">    np.save(x_test_savepath, x_test_save)</span><br><span class="line">    np.save(y_test_savepath, y_test)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+
+
+<p>下面需要自己写个函数读入数据集</p>
+<h5 id="npy数据集的读入"><a href="#npy数据集的读入" class="headerlink" title="npy数据集的读入"></a>npy数据集的读入</h5><p>手写函数读入数据</p>
+<p>直接调用np.load（）即可读入整个npy文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x_train_save = np.load(x_train_savepath)</span><br><span class="line">y_train = np.save(y_train_savepath)</span><br><span class="line">x_test_save = np.load(x_test_savepath)</span><br><span class="line">y_test = np.load(y_test_savcvepath)</span><br><span class="line">x_train = np.reshape(x_train_save, <span class="built_in">len</span>(x_train_save),<span class="number">28</span>, <span class="number">28</span>)</span><br><span class="line">x_test = np.reshape(x_tet_save, <span class="built_in">len</span>(x_test_save),<span class="number">28</span>, <span class="number">28</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="②npy数据集简单制作（label是文件夹遍历过程中赋予的逻辑值）"><a href="#②npy数据集简单制作（label是文件夹遍历过程中赋予的逻辑值）" class="headerlink" title="②npy数据集简单制作（label是文件夹遍历过程中赋予的逻辑值）"></a>②npy数据集简单制作（label是文件夹遍历过程中赋予的逻辑值）</h4><p>此过程不用先生成一个单独的txt文件来才存储标签，但是在给图像分类并且每种图片放入指定文件夹的过程比较繁琐。此过程借鉴自<a target="_blank" rel="noopener" href="https://blog.csdn.net/umbrellalalalala/article/details/86516928#commentBox">https://blog.csdn.net/umbrellalalalala/article/details/86516928#commentBox</a></p>
+<p>这次用到的数据集是五种花的彩色图像（在一个主文件夹flower_photos中建五个子文件夹分别放对应的花，另外建一个主主文件夹放生成的npy数据集包）</p>
+<p>代码解析：</p>
+<ol>
+<li>函数返回图像和标签矩阵</li>
 </ol>
-<p>SIFT是什么？简单来说就是图像中某个局部区域（如16*16像素的一个区域）对应的梯度直方图，这就是最简单直观的理解。当然，SIFT还包括各种细节，如量化，尺度金字塔、旋转不变性、局部归一化等，这些东西很多博客上都有“教科书般”的介绍。</p>
-<p>SURF是什么？SURF本身不是什么新的descriptor，而是对SIFT实现上的加速，核心点在于采用<strong>积分图</strong>对计算加速。</p>
-<p>作者：大道至简知不语<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/40736560/answer/358547318">https://www.zhihu.com/question/40736560/answer/358547318</a><br>来源：知乎</p>
-<p><strong>知识点：积分图</strong></p>
-<h3 id="sift深度剖析"><a href="#sift深度剖析" class="headerlink" title="sift深度剖析"></a>sift深度剖析</h3><h4 id="1、明确学习目的"><a href="#1、明确学习目的" class="headerlink" title="1、明确学习目的"></a>1、明确学习目的</h4><p>不管是Harris还是Shi-Tomas，角点检测检测即便做得再优化，也总是有不可克服的缺点：</p>
-<ul>
-<li><strong>对尺度很敏感，不具有尺度不变性</strong></li>
-<li><strong>需要设计角点匹配算法</strong></li>
-</ul>
-<p>而SIFT算法是一种基于局部兴趣点的算法，因此</p>
-<ul>
-<li><strong>不仅对图片大小和旋转不敏感</strong></li>
-<li><strong>而且对光照、噪声等影响的抗击能力也非常优秀</strong></li>
-</ul>
-<p>因此，该算法在性能和适用范围方面较于之前的算法有着质的改变。</p>
-<p>在学习sift算法之前，我们先得搞明白这个算法目的是为了干什么，无非就是找到图像中的特征点，找到优质的特征点。</p>
-<p>优质的特征点有什么特征呢？</p>
-<ul>
-<li><strong>尺度不变性：</strong>人类在识别一个物体时，不管这个物体或远或近，都能对它进行正确的辨认，这就是所谓的尺度不变性。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/cat_scale.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/cat_scale.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<ul>
-<li><strong>旋转不变性：</strong>当这个物体发生旋转时，我们照样可以正确地辨认它，这就是所谓的旋转不变性。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/cat_direct.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/cat_direct.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<h4 id="2、sift过程"><a href="#2、sift过程" class="headerlink" title="2、sift过程"></a>2、sift过程</h4><h5 id="构建多尺度的高斯金字塔"><a href="#构建多尺度的高斯金字塔" class="headerlink" title="构建多尺度的高斯金字塔"></a>构建多尺度的高斯金字塔</h5><blockquote>
-<p>①构建单尺度的空间，单尺度空间有6张图，六张图分别是经过方差大小不同的高斯滤波处理的图</p>
-</blockquote>
-<blockquote>
-<p>②然后对同一尺度的一组照片中的相邻滤波处理的照片做差得到的就是图像的轮廓，轮廓就是我们要得到的最基本的特征。做差得出的图像就叫做DoG。</p>
-</blockquote>
-<blockquote>
-<p>③然后再分成多个尺度，小尺度是通过上一层大尺度的第三张照片作为原图再次进行高斯滤波得到的。这一步就是要解决尺度的问题：构建金字塔，将特征值拓展到多分辨率上。</p>
-<p><em><strong>我的疑惑点：这么多尺度的图像他是怎样提取不同尺度的图像，然后融合在一起的</strong></em></p>
-</blockquote>
-<h5 id="检测尺度空间的极值点"><a href="#检测尺度空间的极值点" class="headerlink" title="检测尺度空间的极值点"></a>检测尺度空间的极值点</h5><blockquote>
-<p>直接遍历找出极值点，极值点不但要根这个点周围的八个点比较，还要跟同一层相邻的另外两张图像作比较。一共比较26个点。注意做完这一步之后，应该就可以在原图上画出来极值点坐标了示意图了。</p>
-</blockquote>
-<h5 id="精确定位极值点"><a href="#精确定位极值点" class="headerlink" title="精确定位极值点"></a>精确定位极值点</h5><blockquote>
-<p>上一步我们已经找到了相关的特征点的大致坐标，接下来就要确定他们的准确位置，这里牵涉到很多数学运算。</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/jingqueweizhi.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/jingqueweizhi.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<h5 id="选取特征点的方向"><a href="#选取特征点的方向" class="headerlink" title="选取特征点的方向"></a>选取特征点的方向</h5><blockquote>
-<p>对我们已经用金字塔解决了尺度不变性问题，下面就要通过确定特征点的方向来解决旋转不变性问题。完成关键点的梯度计算后，使用直方图统计邻域内像素的梯度和方向。梯度直方图将0~360度的方向范围分为36个柱(bins)，其中每柱10度。如图所示，直方图的峰值方向代表了关键点的主方向，(为简化，图中只画了八个方向的直方图)。</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/direction.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/direction.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<blockquote>
-<p><strong>直方图的峰值则代表了该关键点处邻域梯度的主方向，即作为该关键点的方向；其他的达到最大值80%的方向可作为辅助方向。</strong>到这里我们已经检测出的含有位置、尺度和方向的关键点即是该图像的SIFT特征点。</p>
-</blockquote>
-<h5 id="生成关键描述子"><a href="#生成关键描述子" class="headerlink" title="生成关键描述子"></a>生成关键描述子</h5><p>到这里还没有结束</p>
-<p>金字塔保证特征点的空间不变性， 严格删选保证了特征点的准确性， 方向信息保证了特征点的旋转不变性。我们如何把所有信息作为属性附加给关键点呢？</p>
-<p>①为什么要添加描述子：通过上面的步骤，对于每一个关键点，拥有三个信息：<strong>位置、尺度以及方向</strong>。接下来就是为每个关键点建立一个描述符，用一组向量将这个关键点描述出来，使其不随各种变化而改变，比如光照变化、视角变化等等。这个描述子不但包括关键点，也包含关键点周围对其有贡献的像素点，并且描述符应该有较高的独特性，以便于提高特征点正确匹配的概率。</p>
-<p>②添加过程：<strong>1) 确定计算描述子所需的图像区域</strong>特征描述子与特征点所在的尺度有关，因此，对梯度的求取应在特征点对应的高斯图像上进行。将关键点附近的邻域划分为d*d(Lowe建议d&#x3D;4)个子区域，每个子区域做为一个种子点，每个种子点有8个方向。每个子区域的大小与关键点方向分配时相同。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/miaoshuziimg.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/miaoshuziimg.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>以关键点为中心，4*4格为一个种子点，每个种子点8个方向。</p>
-<p>每一个小格都代表了特征点邻域所在的尺度空间的一个像素 ，箭头方向代表了像素梯度方向，箭头长度代表该像素的幅值。然后在4×4的窗口内计算8个方向的梯度方向直方图。绘制每个梯度方向的累加可形成一个种子点。</p>
-<ul>
-<li><strong>2) 将坐标轴旋转为关键点的方向，以确保旋转不变性</strong></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/xuanzhuanxy.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/xuanzhuanxy.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<ul>
-<li><strong>3) 将邻域内的采样点分配到对应的子区域内，将子区域内的梯度值分配到8个方向上，计算其权值</strong></li>
-</ul>
-<p><img src="https://www.zhihu.com/equation?tex=w=m(a+x,+b+y)+*+e%5E%7B-%5Cfrac%7B%5Cleft(x%5E%7B%5Cprime%7D%5Cright)%5E%7B2%7D+%5Cleft(y%5E%7B%5Cprime%7D%5Cright)%5E%7B2%7D%7D%7B2+%5Ctimes(0.5+d)%5E%7B2%7D%7D%7D" class="lazyload" data-srcset="https://www.zhihu.com/equation?tex=w=m(a+x,+b+y)+*+e%5E%7B-%5Cfrac%7B%5Cleft(x%5E%7B%5Cprime%7D%5Cright)%5E%7B2%7D+%5Cleft(y%5E%7B%5Cprime%7D%5Cright)%5E%7B2%7D%7D%7B2+%5Ctimes(0.5+d)%5E%7B2%7D%7D%7D" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="[公式]"></p>
-<p>其中a，b为关键点在高斯金字塔图像中的位置坐标。</p>
-<ul>
-<li><strong>4) 插值计算每个种子点八个方向的梯度</strong></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/zhongzitidu.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/zhongzitidu.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<ul>
-<li><strong>5) 归一化</strong></li>
-</ul>
-<p>如上统计的4<em>4</em>8&#x3D;128个梯度信息即为该关键点的特征向量。特征向量形成后，为了去除光照变化的影响，需要对它们进行归一化处理，对于图像灰度值整体漂移，图像各点的梯度是邻域像素相减得到，所以也能去除。</p>
-<ul>
-<li><strong>6） 向量门限</strong></li>
-</ul>
-<p>描述子向量门限。非线性光照，相机饱和度变化对造成某些方向的梯度值过大，而对方向的影响微弱。因此设置门限值(向量归一化后，一般取0.2)截断较大的梯度值。然后，再进行一次归一化处理，提高特征的鉴别性。</p>
-<ul>
-<li><strong>7） 排序</strong></li>
-</ul>
-<p>按特征点的尺度对特征描述向量进行排序。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/paixu.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/paixu.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>在每个4<em>4的1&#x2F;16象限中，通过加权梯度值加到直方图8个方向区间中的一个，计算出一个梯度方向直方图。这样就可以对每个feature形成一个4</em>4<em>8&#x3D;128维的描述子，每一维都可以表示4</em>4个格子中一个的scale&#x2F;orientation. 将这个向量归一化之后，就进一步去除了光照的影响。</p>
-<h4 id="3-sift怎么匹配"><a href="#3-sift怎么匹配" class="headerlink" title="3.sift怎么匹配"></a>3.sift怎么匹配</h4><p><strong>1、 首先还是要对图片生成特征点</strong></p>
-<p>一张图经过SIFT算法后，会得到多个特征点，每个特征点有128维的描述子属性。那么，匹配特征点都简单多啦！</p>
-<p>生成了A、B两幅图的描述子，（分别是k1<em>128维和k2</em>128维），就将两图中各个scale（所有scale）的描述子进行匹配，匹配上128维即可表示两个特征点match上了。</p>
-<p><strong>2、 然后考虑怎么匹配</strong></p>
-<p>当两幅图像的SIFT特征向量生成后，下一步我们采用关键点特征向量的欧式距离来作为两幅图像中关键点的相似性判定度量。取图像1中的某个关键点，并找出其与图像2中欧式距离最近的前两个关键点，在这两个关键点中，如果最近的距离除以次近的距离少于某个比例阈值，则接受这一对匹配点。降低这个比例阈值，SIFT匹配点数目会减少，但更加稳定。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/xfeatures2d.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv::xfeatures2d;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>** argv)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	Mat cat = <span class="built_in">imread</span>(<span class="string">&quot;cat.png&quot;</span>);</span><br><span class="line">	Mat smallCat = <span class="built_in">imread</span>(<span class="string">&quot;smallCat.png&quot;</span>);</span><br><span class="line">	<span class="built_in">imshow</span>(<span class="string">&quot;cat image&quot;</span>, cat);</span><br><span class="line">	<span class="built_in">imshow</span>(<span class="string">&quot;smallCat image&quot;</span>, smallCat);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">auto</span> detector = SIFT::<span class="built_in">create</span>();</span><br><span class="line">	vector&lt;KeyPoint&gt; keypoints_cat, keypoints_smallCat;</span><br><span class="line">	Mat descriptor_cat, descriptor_smallCat;</span><br><span class="line">	detector-&gt;<span class="built_in">detectAndCompute</span>(cat, <span class="built_in">Mat</span>(), keypoints_cat, descriptor_cat);</span><br><span class="line">	detector-&gt;<span class="built_in">detectAndCompute</span>(smallCat, <span class="built_in">Mat</span>(), keypoints_smallCat, descriptor_smallCat);</span><br><span class="line"></span><br><span class="line">	Ptr&lt;FlannBasedMatcher&gt; matcher = FlannBasedMatcher::<span class="built_in">create</span>();</span><br><span class="line">	vector&lt;DMatch&gt; matches;</span><br><span class="line">	matcher-&gt;<span class="built_in">match</span>(descriptor_cat, descriptor_smallCat, matches);</span><br><span class="line">	Mat dst;</span><br><span class="line">	<span class="built_in">drawMatches</span>(cat, keypoints_cat, smallCat, keypoints_smallCat, matches, dst);</span><br><span class="line">	<span class="built_in">imshow</span>(<span class="string">&quot;match-demo&quot;</span>, dst);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">waitKey</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">import</span> os.path</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> tensorflow.python.platform <span class="keyword">import</span> gfile</span><br><span class="line"></span><br><span class="line">INPUT_DATA = <span class="string">&#x27;flower_photo&#x27;</span>     <span class="comment">#图像的绝对路径</span></span><br><span class="line">OUTPUT_DATA = <span class="string">&#x27;processed_flower_data/flower_processed_data.npy&#x27;</span>   <span class="comment">#将整理过的图像数据通过numpy格式保存</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#测试数据和验证数据的比例</span></span><br><span class="line">VALIDATION_PERCENTAGE = <span class="number">10</span></span><br><span class="line">TEST_PERCENTAGE = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#读取数据并且为测试集和训练集还有验证集分配比例</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_image_lists</span>(<span class="params">sess, testing_percentage,validation_percentage</span>):</span><br><span class="line">  <span class="comment">#sub_dirs用于存储主文件夹下面的所有子文件夹目录</span></span><br><span class="line">  sub_dirs = [x[<span class="number">0</span>] <span class="keyword">for</span> x <span class="keyword">in</span> os.walk(INPUT_DATA)]    <span class="comment"># os.walk()方法用于通过在目录中游走输出在目录中的文件名，向上或者向下</span></span><br><span class="line">  is_root_dir = <span class="literal">True</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">#初始化各个数据集</span></span><br><span class="line">  training_images = []</span><br><span class="line">  training_labels = []</span><br><span class="line">  testing_images = []</span><br><span class="line">  testing_labels = []</span><br><span class="line">  validition_images = []</span><br><span class="line">  validation_labels = []</span><br><span class="line">  current_label = <span class="number">0</span>    <span class="comment">#这是要赋值给每种花的一个逻辑标签，在下面循环中，到下一个子目录中要加一</span></span><br><span class="line">  count = <span class="number">1</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">#对每个在sub_dirs中的子文件夹进行操作</span></span><br><span class="line">  <span class="keyword">for</span> sub_dir <span class="keyword">in</span> sub_dirs:</span><br><span class="line">    <span class="keyword">if</span> is_root_dir:</span><br><span class="line">      is_root_dir = <span class="literal">False</span></span><br><span class="line">      <span class="keyword">continue</span>      <span class="comment">#继续下一轮循环，下一轮就无法进入条件分支而是直接执行下列语句</span></span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;开始读取第%d类图片&quot;</span>， % count)</span><br><span class="line">      count + = <span class="number">1</span></span><br><span class="line">      </span><br><span class="line">      <span class="comment">#获取子目录中所有文件</span></span><br><span class="line">      extension = [<span class="string">&#x27;jpg&#x27;</span>, <span class="string">&#x27;jpeg&#x27;</span>, <span class="string">&#x27;JPG&#x27;</span>, <span class="string">&#x27;JPEG&#x27;</span>， <span class="string">&#x27;png&#x27;</span>]   <span class="comment">#列出所有拓展名</span></span><br><span class="line">      file_list = []</span><br><span class="line">      <span class="comment">#返回path最后的文件名。如果path以／或\结尾，那么就会返回空值。即os.path.split(path)的第二个元素</span></span><br><span class="line">      dir_name = os.path.basename(sub_dir)    <span class="comment">#返回子文件夹名称，如果包含文件夹地址串，去掉其地址，只保留文件夹名称</span></span><br><span class="line">      <span class="keyword">for</span> extention <span class="keyword">in</span> extensions:</span><br><span class="line">        <span class="comment"># INPUT_DATA是数据集的根文件夹，其下有五个子文件夹包含所有图像</span></span><br><span class="line">        <span class="comment">#dir_name是是存放某种花的子文件夹</span></span><br><span class="line">        <span class="comment">#file_name进行整合之后的效果是合成以下形式（“INPUT_DATA/dir_name/*.extension”）</span></span><br><span class="line">        file_glob = os.path.join(INPUT_DATA,dir_name,<span class="string">&#x27;*.&#x27;</span>+extension )</span><br><span class="line">        <span class="comment">#glob.glob()返回所有匹配得文件路径列表，此处返回的是所有在INPUT_DATA子目录下的所有后缀是extension的文件</span></span><br><span class="line">        file_list.extend(glob.glob(file_glob))</span><br><span class="line">        </span><br><span class="line">      <span class="keyword">if</span> <span class="keyword">not</span> file_list:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;文件名列表读取完成，开始读取图像&quot;</span>)</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">for</span> file_name <span class="keyword">in</span> file_list:</span><br><span class="line">        <span class="comment">#下面是两句读取文件常用的语句</span></span><br><span class="line">        image_raw_data = gfile.FastGFile(file_name,<span class="string">&#x27;rb&#x27;</span>).read()</span><br><span class="line">        image = tf.image.decode_jpeg(image_raw_data)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">#如果图像类型不是发咯爱听，则进行转换</span></span><br><span class="line">        <span class="keyword">if</span> image.dtype != tf.float32:</span><br><span class="line">          image = tf.image.convert_image_dtype(image, tf.float32)</span><br><span class="line">        <span class="comment">#将图像调整成尺寸299*299，以便于inception—v3模型来处理</span></span><br><span class="line">        image = tf.image.resize_images(image, [<span class="number">299</span>, <span class="number">299</span>])</span><br><span class="line">        image_value = sess.run(image)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">#用随机数生成一定比例的测试集，验证集、训练集</span></span><br><span class="line">        chance = np.random.randint(<span class="number">100</span>)</span><br><span class="line">        <span class="keyword">if</span> chance &lt; validation_percentage:</span><br><span class="line">          validation_images.append(image_value)   <span class="comment"># 由于一共有3670张图片，这样最终的validation_images的尺寸大致是(3670*validation_percentage%)*229*229*3</span></span><br><span class="line">          validation_labels.append(current_label)     <span class="comment"># 由于一共有3670张图片，这样最终的validation_labels的尺寸大致是(3670*validation_percentage%)*1</span></span><br><span class="line">          <span class="keyword">elif</span> chance &lt; (testing_percentage + validation_percentage):</span><br><span class="line">                testing_images.append(image_value)</span><br><span class="line">                testing_labels.append(current_label)</span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">                training_images.append(image_value)</span><br><span class="line">                training_labels.append(current_label)</span><br><span class="line">      current_label += <span class="number">1</span></span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&#x27;本类图片读取完成&#x27;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;开始打乱训练数据集&quot;</span>)</span><br><span class="line">  state = np.random.get_state()    <span class="comment">#获取随机生成器np.random的状态</span></span><br><span class="line">  np.random.shuffle(training_images)    <span class="comment">#进行打乱操作，如果对象是多维矩阵，只对第一组打乱操作</span></span><br><span class="line">  np.random.set_state(state)  <span class="comment">#将之前随机生成器的状态设置为随机生成器状态，目的是让下面一行对标签的打乱和上一行的图片打乱一致</span></span><br><span class="line">  np.random.shuffle(training_labels)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;数据处理完毕&quot;</span>)</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> np.asarray([</span><br><span class="line">    training_images, training_labels,</span><br><span class="line">    validation_images, validation_labels,</span><br><span class="line">    testing_images, testing_labels</span><br><span class="line">  ])</span><br></pre></td></tr></table></figure>
+
+<p>2.主函数调用并生成npy包</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">  <span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    processed_data = create_image_lists(</span><br><span class="line">    	sess, TEST_PERCENTAGE, VALIDATION_PERCENTAGE)</span><br><span class="line">    np.save(OUTPUT_DATA, processed_data)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  main()</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>npy文件的简单使用</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">data = np.load(flower_processed_data.npy)</span><br></pre></td></tr></table></figure>
+
+<p>data的形式如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[training_images, training_labels,</span><br><span class="line">validation_images, validation_labels,</span><br><span class="line">testing_images, testing_labels]</span><br></pre></td></tr></table></figure>
 
 
-<p><img src="https://picb.zhimg.com/80/v2-295c77fc626560a0421be89e19516d6d_720w.jpg" class="lazyload" data-srcset="https://picb.zhimg.com/80/v2-295c77fc626560a0421be89e19516d6d_720w.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
-<p><img src="https://pic4.zhimg.com/80/v2-aac36afb03c30320918b8d3d9f7f986a_720w.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-aac36afb03c30320918b8d3d9f7f986a_720w.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
-<p><img src="https://pic1.zhimg.com/80/v2-799a944fce5797047a6e8a18fb624d2e_720w.jpg" class="lazyload" data-srcset="https://pic1.zhimg.com/80/v2-799a944fce5797047a6e8a18fb624d2e_720w.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
-<p>作者: lowkeyway</p>
-<p>转载自: <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/90122194">https://zhuanlan.zhihu.com/p/90122194</a></p>
-
-
+</div>
   </div>
   
   
@@ -2724,7 +2657,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/>https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/</a></p>
+                <p>本文永久链接是：<a href=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/>https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/</a></p>
               
             
           </blockquote>
@@ -2741,10 +2674,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2020-08-28T17:00:47+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2020-10-17T15:12:10+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年8月28日</p>
+    <p>更新于：2020年10月17日</p>
   </a>
 </div>
 
@@ -2753,8 +2686,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>图像处理笔记</p></a></div>
-  <span hidden itemprop="keywords">图像处理笔记</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/TensorFlow/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>TensorFlow</p></a></div>
+  <span hidden itemprop="keywords">TensorFlow</span>
 
 
         
@@ -2767,8 +2700,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/&title=理解边缘检测sift - 星云小站&summary=
-图像处理——sift理解
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/&title=自制神经网络数据集 - 星云小站&summary=
+将自己领域的数据生成数据包导入神经网络
 "
           
           >
@@ -2781,8 +2714,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/&title=理解边缘检测sift - 星云小站&summary=
-图像处理——sift理解
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/&title=自制神经网络数据集 - 星云小站&summary=
+将自己领域的数据生成数据包导入神经网络
 "
           
           >
@@ -2795,8 +2728,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/&title=理解边缘检测sift - 星云小站&summary=
-图像处理——sift理解
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/&title=自制神经网络数据集 - 星云小站&summary=
+将自己领域的数据生成数据包导入神经网络
 "
           
           >
@@ -2830,31 +2763,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>自制神经网络数据集</p>
-          <p class='content'>
-将自己领域的数据生成数据包导入神经网络
-
-
-
-自制数据集并应用在曹健老师的视频课程中有两种读入数据集的方法，一种是在线下载直接调用；一种是在本地自制数据集，用于自己本领域的数据处理。
-首先简单...</p>
+        <a class='prev' href='/2022/03/16/%E5%9F%9F%E5%90%8D/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></p>
+          <p class='content'>starbling.cn
+waytostar.cn
+starclouds.top
+starsclouds.cn
+starm78.cn
+starkeys.cn
+https://www.hxcpp1...</p>
         </a>
       
       
-        <a class='next' href='/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/'>
-          <p class='title'>图像分割<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='next' href='/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/'>
+          <p class='title'>理解边缘检测sift<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
-我对图像分割的初级认识（现在的图像分割基本概况）
+图像处理——sift理解
 
 
 
-一、图像分割分类按着先进程度分
-传统分割方法
-
-①阈值分割
-
-阈值法的基本思想是基于图像的灰度特征来计算一个或多个灰度阈值，并将图像中每...</p>
+通俗的大致理解
+首先，理解同一幅图像在不同的空间中有不同的表达方式。比如在RGB空间中，图像中的像素点可以用颜色值(r,g,b)来表示；在灰度空间中，图像中的像...</p>
         </a>
       
     </div>
@@ -2870,7 +2799,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2903,7 +2832,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E4%BF%97%E7%9A%84%E5%A4%A7%E8%87%B4%E7%90%86%E8%A7%A3"><span class="toc-text">通俗的大致理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sift%E6%B7%B1%E5%BA%A6%E5%89%96%E6%9E%90"><span class="toc-text">sift深度剖析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E6%98%8E%E7%A1%AE%E5%AD%A6%E4%B9%A0%E7%9B%AE%E7%9A%84"><span class="toc-text">1、明确学习目的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81sift%E8%BF%87%E7%A8%8B"><span class="toc-text">2、sift过程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E5%A4%9A%E5%B0%BA%E5%BA%A6%E7%9A%84%E9%AB%98%E6%96%AF%E9%87%91%E5%AD%97%E5%A1%94"><span class="toc-text">构建多尺度的高斯金字塔</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E5%B0%BA%E5%BA%A6%E7%A9%BA%E9%97%B4%E7%9A%84%E6%9E%81%E5%80%BC%E7%82%B9"><span class="toc-text">检测尺度空间的极值点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B2%BE%E7%A1%AE%E5%AE%9A%E4%BD%8D%E6%9E%81%E5%80%BC%E7%82%B9"><span class="toc-text">精确定位极值点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%89%E5%8F%96%E7%89%B9%E5%BE%81%E7%82%B9%E7%9A%84%E6%96%B9%E5%90%91"><span class="toc-text">选取特征点的方向</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%85%B3%E9%94%AE%E6%8F%8F%E8%BF%B0%E5%AD%90"><span class="toc-text">生成关键描述子</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-sift%E6%80%8E%E4%B9%88%E5%8C%B9%E9%85%8D"><span class="toc-text">3.sift怎么匹配</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86%E5%B9%B6%E5%BA%94%E7%94%A8"><span class="toc-text">自制数据集并应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E5%88%B6%E4%BD%9C%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">首先制作数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A0%E5%88%B6%E4%BD%9Cnpy%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E9%9B%86%EF%BC%88label%E6%98%AFtxt%E5%BD%A2%E5%BC%8F%EF%BC%89"><span class="toc-text">①制作npy格式的本地数据集（label是txt形式）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#npy%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E8%AF%BB%E5%85%A5"><span class="toc-text">npy数据集的读入</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A1npy%E6%95%B0%E6%8D%AE%E9%9B%86%E7%AE%80%E5%8D%95%E5%88%B6%E4%BD%9C%EF%BC%88label%E6%98%AF%E6%96%87%E4%BB%B6%E5%A4%B9%E9%81%8D%E5%8E%86%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B5%8B%E4%BA%88%E7%9A%84%E9%80%BB%E8%BE%91%E5%80%BC%EF%BC%89"><span class="toc-text">②npy数据集简单制作（label是文件夹遍历过程中赋予的逻辑值）</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -2955,7 +2884,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="理解边缘检测sift";
+  pdata.postTitle="自制神经网络数据集";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3065,7 +2994,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1647518358954.js"></script>
+<script src="/js/app.js?time=1647526158800.js"></script>
 
 
 
@@ -3257,7 +3186,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1647518358954')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1647526158800')</script>
 
 
 
@@ -3270,19 +3199,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1647518358954")
+        volantis.js("/js/plugins/sites.js?time=1647526158800")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1647518358954")
+        volantis.js("/js/plugins/friends.js?time=1647526158800")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1647518358954")
+        volantis.js("/js/plugins/contributors.js?time=1647526158800")
       }
     
   };
@@ -3407,7 +3336,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1647518358954");
+    return volantis.js("/js/search/hexo.js?time=1647526158800");
   }
 
   function loadSearchService() {
@@ -3476,7 +3405,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing12.jpeg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing10.jpeg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing12.jpeg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing10.jpeg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3517,7 +3446,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1647518358954').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1647526158800').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -3751,7 +3680,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"https://www.starclouds.top/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.starclouds.top/","name":"星云小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.starclouds.top/categories/图像处理笔记/","name":"图像处理笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.starclouds.top/2022/03/16/图像处理——特征点检测sift/","name":"理解边缘检测sift"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"理解边缘检测sift","description":"\n图像处理——sift理解\n","datePublished":"2022-03-16T12:03:43.253Z","dateModified":"2020-08-28T09:00:47.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/","wordCount":14,"articleSection":"图像处理笔记","keywords":"图像处理笔记","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"https://www.starclouds.top/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.starclouds.top/","name":"星云小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.starclouds.top/categories/TensorFlow/","name":"TensorFlow"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.starclouds.top/2022/03/16/图像处理：自制数据集/","name":"自制神经网络数据集"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"自制神经网络数据集","description":"\n将自己领域的数据生成数据包导入神经网络\n","datePublished":"2022-03-16T12:03:43.255Z","dateModified":"2020-10-17T07:12:10.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/","wordCount":21,"articleSection":"TensorFlow","keywords":"TensorFlow","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

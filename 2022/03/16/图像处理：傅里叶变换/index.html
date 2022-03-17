@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://www.starclouds.top/2022/03/16/图像处理——傅里叶变换/"/>
+  <link rel="canonical" href="https://www.starclouds.top/2022/03/16/图像处理：傅里叶变换/"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,7 +20,7 @@
   <meta content="星云小站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1647518358960" as="style">
+  <link rel="preload" href="/css/style.css?time=1647526158816" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -30,7 +30,7 @@
   <meta name="description" content="1.傅里叶变换的理解傅里叶变换的相关数学公式目前还没有搞懂，先不整那个东西，我们主要是研究傅里叶变换的一些思想和应用。这个思想起源于牛顿研究那个三棱镜，白光透过棱镜之后会被分解为七种颜色的光，这些光叠加又能形成白光，所以说可以把一种事物分解成好几种事物的加和。 后来傅里叶就提出了傅里叶级数，一个等幅度不同频或者等频不同幅的波形可以由一组正弦波余弦波的加和得到（原话：任何连续周期信号可以由一组适当的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="星云小站">
-<meta property="og:url" content="https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/index.html">
+<meta property="og:url" content="https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/index.html">
 <meta property="og:site_name" content="星云小站">
 <meta property="og:description" content="1.傅里叶变换的理解傅里叶变换的相关数学公式目前还没有搞懂，先不整那个东西，我们主要是研究傅里叶变换的一些思想和应用。这个思想起源于牛顿研究那个三棱镜，白光透过棱镜之后会被分解为七种颜色的光，这些光叠加又能形成白光，所以说可以把一种事物分解成好几种事物的加和。 后来傅里叶就提出了傅里叶级数，一个等幅度不同频或者等频不同幅的波形可以由一组正弦波余弦波的加和得到（原话：任何连续周期信号可以由一组适当的">
 <meta property="og:locale" content="zh_CN">
@@ -1627,8 +1627,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1647518358960" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1647518358960"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1647526158816" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1647526158816"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1699,9 +1699,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1647518358960","sites":"/js/plugins/sites.js?time=1647518358960","friends":"/js/plugins/friends.js?time=1647518358960","parallax":"/js/plugins/parallax.js?time=1647518358960","rightMenu":"/js/plugins/rightMenu.js?time=1647518358960","contributors":"/js/plugins/contributors.js?time=1647518358960","message":"/js/thirdparty/message.js?time=1647518358960","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1647518358960","search":"/js/search/hexo.js?time=1647518358960"},"css":{"style":"/css/style.css?time=1647518358960","message":"/css/message.css?time=1647518358960"}},
+    cdn: {"js":{"app":"/js/app.js?time=1647526158816","sites":"/js/plugins/sites.js?time=1647526158816","friends":"/js/plugins/friends.js?time=1647526158816","parallax":"/js/plugins/parallax.js?time=1647526158816","rightMenu":"/js/plugins/rightMenu.js?time=1647526158816","contributors":"/js/plugins/contributors.js?time=1647526158816","message":"/js/thirdparty/message.js?time=1647526158816","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1647526158816","search":"/js/search/hexo.js?time=1647526158816"},"css":{"style":"/css/style.css?time=1647526158816","message":"/css/message.css?time=1647526158816"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Thu Mar 17 2022 19:59:18 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Thu Mar 17 2022 22:09:18 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2521,7 +2521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
+  <link itemprop="mainEntityOfPage" href="https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="星云小站">
   </span>
@@ -2628,7 +2628,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/>https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</a></p>
+                <p>本文永久链接是：<a href=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/>https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</a></p>
               
             
           </blockquote>
@@ -2667,7 +2667,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title= - 星云小站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title= - 星云小站&summary="
           
           >
           
@@ -2679,7 +2679,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title= - 星云小站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title= - 星云小站&summary="
           
           >
           
@@ -2691,7 +2691,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title= - 星云小站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title= - 星云小站&summary="
           
           >
           
@@ -2724,7 +2724,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/'>
+        <a class='prev' href='/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>图像分割</p>
           <p class='content'>
 我对图像分割的初级认识（现在的图像分割基本概况）
@@ -2740,7 +2740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
       
-        <a class='next' href='/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94gabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/'>
+        <a class='next' href='/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/'>
           <p class='title'><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>gabor变换傅里叶变换的缺点如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以...</p>
         </a>
@@ -2758,7 +2758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2953,7 +2953,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1647518358960.js"></script>
+<script src="/js/app.js?time=1647526158816.js"></script>
 
 
 
@@ -3145,7 +3145,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1647518358960')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1647526158816')</script>
 
 
 
@@ -3158,19 +3158,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1647518358960")
+        volantis.js("/js/plugins/sites.js?time=1647526158816")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1647518358960")
+        volantis.js("/js/plugins/friends.js?time=1647526158816")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1647518358960")
+        volantis.js("/js/plugins/contributors.js?time=1647526158816")
       }
     
   };
@@ -3295,7 +3295,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1647518358960");
+    return volantis.js("/js/search/hexo.js?time=1647526158816");
   }
 
   function loadSearchService() {
@@ -3364,7 +3364,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing12.jpeg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing10.jpeg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing12.jpeg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing10.jpeg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3405,7 +3405,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1647518358960').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1647526158816').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -3639,7 +3639,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"https://www.starclouds.top/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.starclouds.top/","name":"星云小站"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.starclouds.top/2022/03/16/图像处理——傅里叶变换/","name":""}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"","description":"","datePublished":"2022-03-16T12:03:43.247Z","dateModified":"2020-08-12T07:52:59.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E2%80%94%E2%80%94%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"https://www.starclouds.top/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.starclouds.top/","name":"星云小站"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.starclouds.top/2022/03/16/图像处理：傅里叶变换/","name":""}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"","description":"","datePublished":"2022-03-16T12:03:43.247Z","dateModified":"2020-08-12T07:52:59.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
