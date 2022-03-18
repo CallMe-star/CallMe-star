@@ -20,24 +20,25 @@
   <meta content="星云小站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1647526232019" as="style">
+  <link rel="preload" href="/css/style.css?time=1647576858684" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>星云小站</title>
-  <meta name="keywords" content="null">
-  <meta name="description" content="gabor变换傅里叶变换的缺点如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻的频域特征都很重要，但是由于傅里叶变换不具有局部性，不能将时频两域完全分离。 其实根本原因是傅里叶变换的三角基是全域性的，其局部化性质不好，因而只能得到信号的整个频谱，难以在任何有限频段上确定">
+  <title>gabor变换 - 星云小站</title>
+  <meta name="keywords" content="图像处理,null">
+  <meta name="description" content="傅里叶变换的缺点如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻的频域特征都很重要，但是由于傅里叶变换不具有局部性，不能将时频两域完全分离。 其实根本原因是傅里叶变换的三角基是全域性的，其局部化性质不好，因而只能得到信号的整个频谱，难以在任何有限频段上确定任意小范围内信">
 <meta property="og:type" content="article">
-<meta property="og:title" content="星云小站">
+<meta property="og:title" content="gabor变换">
 <meta property="og:url" content="https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/index.html">
 <meta property="og:site_name" content="星云小站">
-<meta property="og:description" content="gabor变换傅里叶变换的缺点如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻的频域特征都很重要，但是由于傅里叶变换不具有局部性，不能将时频两域完全分离。 其实根本原因是傅里叶变换的三角基是全域性的，其局部化性质不好，因而只能得到信号的整个频谱，难以在任何有限频段上确定">
+<meta property="og:description" content="傅里叶变换的缺点如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻的频域特征都很重要，但是由于傅里叶变换不具有局部性，不能将时频两域完全分离。 其实根本原因是傅里叶变换的三角基是全域性的，其局部化性质不好，因而只能得到信号的整个频谱，难以在任何有限频段上确定任意小范围内信">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.starclouds.top/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-03-16T12:03:43.245Z">
-<meta property="article:modified_time" content="2020-08-14T05:36:15.000Z">
+<meta property="article:modified_time" content="2022-03-18T03:41:07.233Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="图像处理">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.starclouds.top/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1627,8 +1628,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1647526232019" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1647526232019"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1647576858684" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1647576858684"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1699,9 +1700,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1647526232019","sites":"/js/plugins/sites.js?time=1647526232019","friends":"/js/plugins/friends.js?time=1647526232019","parallax":"/js/plugins/parallax.js?time=1647526232019","rightMenu":"/js/plugins/rightMenu.js?time=1647526232019","contributors":"/js/plugins/contributors.js?time=1647526232019","message":"/js/thirdparty/message.js?time=1647526232019","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1647526232019","search":"/js/search/hexo.js?time=1647526232019"},"css":{"style":"/css/style.css?time=1647526232019","message":"/css/message.css?time=1647526232019"}},
+    cdn: {"js":{"app":"/js/app.js?time=1647576858684","sites":"/js/plugins/sites.js?time=1647576858684","friends":"/js/plugins/friends.js?time=1647576858684","parallax":"/js/plugins/parallax.js?time=1647576858684","rightMenu":"/js/plugins/rightMenu.js?time=1647576858684","contributors":"/js/plugins/contributors.js?time=1647576858684","message":"/js/thirdparty/message.js?time=1647576858684","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1647576858684","search":"/js/search/hexo.js?time=1647576858684"},"css":{"style":"/css/style.css?time=1647576858684","message":"/css/message.css?time=1647576858684"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Thu Mar 17 2022 22:10:32 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Fri Mar 18 2022 12:14:18 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2541,19 +2542,66 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        gabor变换
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' target="_blank" href="https://blog.csdn.net/m0_46439571" rel="nofollow noopener">
+    <img itemprop="image" src="https://cdn.jsdelivr.net/gh/CallMe-star/picbed/pai11.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/CallMe-star/picbed/pai11.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">CallMe_star</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
       </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-03-16T20:03:43+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年3月16日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="gabor变换"><a href="#gabor变换" class="headerlink" title="gabor变换"></a>gabor变换</h1><h4 id="傅里叶变换的缺点"><a href="#傅里叶变换的缺点" class="headerlink" title="傅里叶变换的缺点"></a>傅里叶变换的缺点</h4><p>如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻的频域特征都很重要，但是由于傅里叶变换不具有局部性，不能将时频两域完全分离。</p>
+    <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h4 id="傅里叶变换的缺点"><a href="#傅里叶变换的缺点" class="headerlink" title="傅里叶变换的缺点"></a>傅里叶变换的缺点</h4><p>如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻的频域特征都很重要，但是由于傅里叶变换不具有局部性，不能将时频两域完全分离。</p>
 <p>其实根本原因是傅里叶变换的三角基是全域性的，其局部化性质不好，因而只能得到信号的整个频谱，难以在任何有限频段上确定任意小范围内信号的局部特征。</p>
 <p>伽柏就提出了“窗口Fourier变换，也就是Gabor变换”</p>
-<h4 id="gabor变换-1"><a href="#gabor变换-1" class="headerlink" title="gabor变换"></a>gabor变换</h4><p>Gabor小波与人类视觉系统中简单细胞的视觉刺激响应非常相似。它在提取目标的局部空间和频率域信息方面具有良好的特性。虽然Gabor小波本身并不能构成正交基，但在特定参数下可构成紧框架。Gabor小波对于图像的边缘敏感，能够提供良好的方向选择和尺度选择特性，而且对于光照变化不敏感,能够提供对光照变化良好的适应性。上述特点使Gabor小波被广泛应用于视觉信息理解。</p>
+<h4 id="gabor变换"><a href="#gabor变换" class="headerlink" title="gabor变换"></a>gabor变换</h4><p>Gabor小波与人类视觉系统中简单细胞的视觉刺激响应非常相似。它在提取目标的局部空间和频率域信息方面具有良好的特性。虽然Gabor小波本身并不能构成正交基，但在特定参数下可构成紧框架。Gabor小波对于图像的边缘敏感，能够提供良好的方向选择和尺度选择特性，而且对于光照变化不敏感,能够提供对光照变化良好的适应性。上述特点使Gabor小波被广泛应用于视觉信息理解。</p>
 <p>Gabor滤波器和脊椎动物视觉皮层感受野响应的比较：第一行代表脊椎动物的视觉皮层感受野，第二行是Gabor滤波器，第三行是两者的残差。可见两者相差极小。Gabor滤波器的这一性质，使得其在视觉领域中经常被用来作图像的预处理。</p>
 <p><img src="/Users/star/Desktop/gabor.jpg" class="lazyload" data-srcset="/Users/star/Desktop/gabor.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="> </p>
 <p> Gabor变换在一定程度上解决了局部分析的问题，但对于突变信号和非平稳信号仍难以得到满意的结果，即Gabor变换仍存在着较严重的缺陷。1）Gabor变换的时频窗口大小、形状不变，只有位置变化，而实际应用中常常希望时频窗口的大小、形状要随频率的变化而变化，因为信号的频率与周期成反比，对高频部分希望能给出相对较窄的时间窗口，以提高分辨率，在低频部分则希望能给出相对较宽的时间窗口，以保证信息的完整性，总之是希望能给出能够调节的时频窗；2）Gabor变换基函数不能成为正交系，因此为了不丢失信息，在信号分析或数值计算时必须采用非正交的冗余基，这就增加了不必要的计算量和存储量。</p>
@@ -2600,10 +2648,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2020-08-14T13:36:15+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-03-18T11:41:07+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年8月14日</p>
+    <p>更新于：2022年3月18日</p>
   </a>
 </div>
 
@@ -2611,6 +2659,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>图像处理</p></a></div>
+  <span hidden itemprop="keywords">图像处理</span>
+
 
         
       
@@ -2622,7 +2674,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/&title= - 星云小站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/&title=gabor变换 - 星云小站&summary="
           
           >
           
@@ -2634,7 +2686,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/&title= - 星云小站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/&title=gabor变换 - 星云小站&summary="
           
           >
           
@@ -2646,7 +2698,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/&title= - 星云小站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/&title=gabor变换 - 星云小站&summary="
           
           >
           
@@ -2680,7 +2732,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></p>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>傅里叶变换</p>
           <p class='content'>1.傅里叶变换的理解傅里叶变换的相关数学公式目前还没有搞懂，先不整那个东西，我们主要是研究傅里叶变换的一些思想和应用。这个思想起源于牛顿研究那个三棱镜，白光透过棱镜之后会被分解为七种颜色的光，这...</p>
         </a>
       
@@ -2760,7 +2812,7 @@ tf.wher...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">傅里叶变换的缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gabor%E5%8F%98%E6%8D%A2-1"><span class="toc-text">gabor变换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2%E7%9A%84%E5%87%BA%E7%8E%B0"><span class="toc-text">小波变换的出现</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">傅里叶变换的缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gabor%E5%8F%98%E6%8D%A2"><span class="toc-text">gabor变换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2%E7%9A%84%E5%87%BA%E7%8E%B0"><span class="toc-text">小波变换的出现</span></a></li></ol>
     </div>
   </section>
 
@@ -2811,8 +2863,8 @@ tf.wher...</p>
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="gabor变换";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2922,7 +2974,7 @@ tf.wher...</p>
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1647526232019.js"></script>
+<script src="/js/app.js?time=1647576858684.js"></script>
 
 
 
@@ -3114,7 +3166,7 @@ tf.wher...</p>
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1647526232019')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1647576858684')</script>
 
 
 
@@ -3127,19 +3179,19 @@ tf.wher...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1647526232019")
+        volantis.js("/js/plugins/sites.js?time=1647576858684")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1647526232019")
+        volantis.js("/js/plugins/friends.js?time=1647576858684")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1647526232019")
+        volantis.js("/js/plugins/contributors.js?time=1647576858684")
       }
     
   };
@@ -3264,7 +3316,7 @@ tf.wher...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1647526232019");
+    return volantis.js("/js/search/hexo.js?time=1647576858684");
   }
 
   function loadSearchService() {
@@ -3333,7 +3385,7 @@ tf.wher...</p>
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing10.jpeg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing12.jpeg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing10.jpeg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing12.jpeg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3374,7 +3426,7 @@ tf.wher...</p>
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1647526232019').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1647576858684').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -3608,7 +3660,7 @@ tf.wher...</p>
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"https://www.starclouds.top/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.starclouds.top/","name":"星云小站"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.starclouds.top/2022/03/16/图像处理：gabor与小波变换/","name":""}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"","description":"","datePublished":"2022-03-16T12:03:43.245Z","dateModified":"2020-08-14T05:36:15.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"https://www.starclouds.top/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.starclouds.top/","name":"星云小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.starclouds.top/categories/图像处理/","name":"图像处理"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.starclouds.top/2022/03/16/图像处理：gabor与小波变换/","name":"gabor变换"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"gabor变换","description":"","datePublished":"2022-03-16T12:03:43.245Z","dateModified":"2022-03-18T03:41:07.233Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.starclouds.top/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.starclouds.top/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/","wordCount":0,"articleSection":"图像处理","keywords":"图像处理","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
