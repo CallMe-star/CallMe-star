@@ -20,7 +20,7 @@
   <meta content="星云小站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649165390206" as="style">
+  <link rel="preload" href="/css/style.css?time=1649165533616" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1628,8 +1628,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649165390206" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649165390206"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1649165533616" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1649165533616"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1700,9 +1700,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649165390206","sites":"/js/plugins/sites.js?time=1649165390206","friends":"/js/plugins/friends.js?time=1649165390206","parallax":"/js/plugins/parallax.js?time=1649165390206","rightMenu":"/js/plugins/rightMenu.js?time=1649165390206","contributors":"/js/plugins/contributors.js?time=1649165390206","message":"/js/thirdparty/message.js?time=1649165390206","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1649165390206","search":"/js/search/hexo.js?time=1649165390206"},"css":{"style":"/css/style.css?time=1649165390206","message":"/css/message.css?time=1649165390206"}},
+    cdn: {"js":{"app":"/js/app.js?time=1649165533616","sites":"/js/plugins/sites.js?time=1649165533616","friends":"/js/plugins/friends.js?time=1649165533616","parallax":"/js/plugins/parallax.js?time=1649165533616","rightMenu":"/js/plugins/rightMenu.js?time=1649165533616","contributors":"/js/plugins/contributors.js?time=1649165533616","message":"/js/thirdparty/message.js?time=1649165533616","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1649165533616","search":"/js/search/hexo.js?time=1649165533616"},"css":{"style":"/css/style.css?time=1649165533616","message":"/css/message.css?time=1649165533616"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Apr 05 2022 21:29:50 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Tue Apr 05 2022 21:32:13 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2598,12 +2598,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h4 id="傅里叶变换的缺点"><a href="#傅里叶变换的缺点" class="headerlink" title="傅里叶变换的缺点"></a>傅里叶变换的缺点</h4><p>如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻的频域特征都很重要，但是由于傅里叶变换不具有局部性，不能将时频两域完全分离。</p>
+    <h1 id><a href="#" class="headerlink" title></a></h1><h4 id="傅里叶变换的缺点"><a href="#傅里叶变换的缺点" class="headerlink" title="傅里叶变换的缺点"></a>傅里叶变换的缺点</h4><p>如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻的频域特征都很重要，但是由于傅里叶变换不具有局部性，不能将时频两域完全分离。</p>
 <p>其实根本原因是傅里叶变换的三角基是全域性的，其局部化性质不好，因而只能得到信号的整个频谱，难以在任何有限频段上确定任意小范围内信号的局部特征。</p>
 <p>伽柏就提出了“窗口Fourier变换，也就是Gabor变换”</p>
 <h4 id="gabor变换"><a href="#gabor变换" class="headerlink" title="gabor变换"></a>gabor变换</h4><p>Gabor小波与人类视觉系统中简单细胞的视觉刺激响应非常相似。它在提取目标的局部空间和频率域信息方面具有良好的特性。虽然Gabor小波本身并不能构成正交基，但在特定参数下可构成紧框架。Gabor小波对于图像的边缘敏感，能够提供良好的方向选择和尺度选择特性，而且对于光照变化不敏感,能够提供对光照变化良好的适应性。上述特点使Gabor小波被广泛应用于视觉信息理解。</p>
 <p>Gabor滤波器和脊椎动物视觉皮层感受野响应的比较：第一行代表脊椎动物的视觉皮层感受野，第二行是Gabor滤波器，第三行是两者的残差。可见两者相差极小。Gabor滤波器的这一性质，使得其在视觉领域中经常被用来作图像的预处理。</p>
-<p><img src="/Users/star/Desktop/gabor.jpg" class="lazyload" data-srcset="/Users/star/Desktop/gabor.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="> </p>
+<p><img src="/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/star/Desktop/gabor.jpg" class="lazyload" data-srcset="/2022/03/16/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/star/Desktop/gabor.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="> </p>
 <p> Gabor变换在一定程度上解决了局部分析的问题，但对于突变信号和非平稳信号仍难以得到满意的结果，即Gabor变换仍存在着较严重的缺陷。1）Gabor变换的时频窗口大小、形状不变，只有位置变化，而实际应用中常常希望时频窗口的大小、形状要随频率的变化而变化，因为信号的频率与周期成反比，对高频部分希望能给出相对较窄的时间窗口，以提高分辨率，在低频部分则希望能给出相对较宽的时间窗口，以保证信息的完整性，总之是希望能给出能够调节的时频窗；2）Gabor变换基函数不能成为正交系，因此为了不丢失信息，在信号分析或数值计算时必须采用非正交的冗余基，这就增加了不必要的计算量和存储量。</p>
 <p>这使得我们使用多大的窗函数成了一个问题</p>
 <p>![](&#x2F;Users&#x2F;star&#x2F;Desktop&#x2F;chuang 1.jpg)</p>
@@ -2977,7 +2977,7 @@ tf.wher...</p>
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649165390206.js"></script>
+<script src="/js/app.js?time=1649165533616.js"></script>
 
 
 
@@ -3169,7 +3169,7 @@ tf.wher...</p>
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1649165390206')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1649165533616')</script>
 
 
 
@@ -3182,19 +3182,19 @@ tf.wher...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649165390206")
+        volantis.js("/js/plugins/sites.js?time=1649165533616")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649165390206")
+        volantis.js("/js/plugins/friends.js?time=1649165533616")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649165390206")
+        volantis.js("/js/plugins/contributors.js?time=1649165533616")
       }
     
   };
@@ -3307,7 +3307,7 @@ tf.wher...</p>
       VolantisFancyBox.bind('#valine_container .vcontent img:not(.vemoji)');
     }
   }
-  volantis.js('https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1649165390206').then(pjax_valine)
+  volantis.js('https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1649165533616').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3325,7 +3325,7 @@ tf.wher...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1649165390206");
+    return volantis.js("/js/search/hexo.js?time=1649165533616");
   }
 
   function loadSearchService() {
@@ -3394,7 +3394,7 @@ tf.wher...</p>
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing12.jpeg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing10.jpeg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing10.jpeg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing12.jpeg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg","https://cdn.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3435,7 +3435,7 @@ tf.wher...</p>
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1649165390206').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1649165533616').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
