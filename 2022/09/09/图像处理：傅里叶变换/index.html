@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://starlit.com/archives/2022/09/"/>
+  
+  <link rel="canonical" href="http://starlit.com/2022/09/09/图像处理：傅里叶变换/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,18 +32,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2022/9 - 星云小站</title>
-  <meta name="keywords" content="null">
+  <title>傅里叶变换 - 星云小站</title>
+  <meta name="keywords" content="图像处理,null">
   <meta desc name="description" content="个人博客 - star - 星云小站">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="星云小站">
-<meta property="og:url" content="http://starlit.com/archives/2022/09/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="傅里叶变换">
+<meta property="og:url" content="http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/index.html">
 <meta property="og:site_name" content="星云小站">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="1.傅里叶变换的理解傅里叶变换的相关数学公式目前还没有搞懂，先不整那个东西，我们主要是研究傅里叶变换的一些思想和应用。这个思想起源于牛顿研究那个三棱镜，白光透过棱镜之后会被分解为七种颜色的光，这些光叠加又能形成白光，所以说可以把一种事物分解成好几种事物的加和。 后来傅里叶就提出了傅里叶级数，一个等幅度不同频或者等频不同幅的波形可以由一组正弦波余弦波的加和得到（原话：任何连续周期信号可以由一组适当的">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-09-09T14:44:27.650Z">
+<meta property="article:modified_time" content="2022-04-05T08:54:05.250Z">
 <meta property="article:author" content="star">
+<meta property="article:tag" content="图像处理">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2127,7 +2130,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2396,7 +2399,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2473,402 +2476,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/10/新建一个webhook/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/10/%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AAwebhook/"  itemprop="url">
-        Sep 10, 2022
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        新建一个webhook用于测试本地hexo部署之后服务器会不会同步
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-10T14:10:31+08:00">2022-09-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/10/%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AAwebhook/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/破解成功/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E7%A0%B4%E8%A7%A3%E6%88%90%E5%8A%9F/"  itemprop="url">
-        Sep 9, 2022
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        破解成功1、test-12、Test-2
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E7%A0%B4%E8%A7%A3%E6%88%90%E5%8A%9F/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/用tf.keras搭建网络八股/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E7%94%A8tf.keras%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%85%AB%E8%82%A1/"  itemprop="url">
-        tensorflow第四节
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>八股六步法搭建网络结构</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/TensorFlow/">TensorFlow</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/TensorFlow/" itemprop="url"><span itemprop="name">TensorFlow</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E7%94%A8tf.keras%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%85%AB%E8%82%A1/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/图像处理：自制数据集/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/"  itemprop="url">
-        自制神经网络数据集
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>将自己领域的数据生成数据包导入神经网络</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/TensorFlow/">TensorFlow</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/TensorFlow/" itemprop="url"><span itemprop="name">TensorFlow</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/图像处理：特征点检测sift/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/"  itemprop="url">
-        理解边缘检测sift
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>图像处理——sift理解</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/图像处理：图像分割/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"  itemprop="url">
-        图像分割
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>我对图像分割的初级认识（现在的图像分割基本概况）</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/图像处理：傅里叶变换/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="星云小站">
@@ -2878,267 +2486,289 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="个人博客">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         傅里叶变换
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
     
-      
-        1.傅里叶变换的理解傅里叶变换的相关数学公式目前还没有搞懂，先不整那个东西，我们主要是研究傅里叶变换的一些思想和应用。这个思想起源于牛顿研究那个三棱镜，白光透过棱镜之后会被分解为七种颜色的光，这些光叠加又能形成白光，所以说可以把一种事物分解成好几种事物的加和。
-后来傅里叶就提出了傅里叶级数，一个等幅度不同频或者等频不同幅的波形可以由一组正弦波余弦波的加和得到（原话：任何连续周期信号可以由一组...
-      
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 9, 2022</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="1-傅里叶变换的理解"><a href="#1-傅里叶变换的理解" class="headerlink" title="1.傅里叶变换的理解"></a>1.傅里叶变换的理解</h2><p>傅里叶变换的相关数学公式目前还没有搞懂，先不整那个东西，我们主要是研究傅里叶变换的一些思想和应用。这个思想起源于牛顿研究那个三棱镜，白光透过棱镜之后会被分解为七种颜色的光，这些光叠加又能形成白光，所以说可以把一种事物分解成好几种事物的加和。</p>
+<p>后来傅里叶就提出了<em><strong>傅里叶级数</strong></em>，一个等幅度不同频或者等频不同幅的波形可以由一组正弦波余弦波的加和得到（原话：任何连续周期信号可以由一组适当的正弦曲线组合而成）</p>
+<h2 id="2-傅里叶级数"><a href="#2-傅里叶级数" class="headerlink" title="2.傅里叶级数"></a>2.傅里叶级数</h2><p>可以这么理解：原图像相当于在时间域中的一个曲线，坐标图是个二维坐标系，横轴是时间，纵轴是幅值的一个曲线，我们通过傅里叶变换可以把这条曲线变成多条正余弦函数相加的形式：傅里叶变换之后形成的是一个三维坐标系，他的x轴是频率（w），y轴是相位（因为每个正余弦函数的起点不同，有的是从零点开始，有的不是，这个曲线开始的那个幅值就是相位，相位就是后公式中的φ），z轴是振幅高度，。这样可以把一个图像从空间域转换到频率域，因为两者等价，所以可以逆变换回去。但这个傅里叶级数只能针对周期型函数才能拆分成多个正余弦函数相加，所以后来有了傅里叶变换。<br>$$<br>f(t) = \frac{a_n}{2}+\sum a_n*sin（nwt+φ_n）<br>$$</p>
+<h2 id="3-傅里叶变换"><a href="#3-傅里叶变换" class="headerlink" title="3.傅里叶变换"></a>3.傅里叶变换</h2><p>其中推导公式中用到了欧拉公式，<br>$$<br>\cos(x)+i*sin(x) = e^{ix}\<br>x = wt\<br>x = wt  表示在单位圆逆时针旋转\<br>\<br>F_T = \int_{-\infty}^{+\infty}f(t)e^{jwt}dt<br>$$<br>然后通过逆变换可以再变回去。通过傅里叶变换就可以把一个随机的曲线，转换到频率域，只不过这次的三维坐标系对应的w和幅值的函数图像不再是离散的图像了，而是一个连续图像。y轴所对应的相位意义没变。</p>
+<h2 id="4-应用"><a href="#4-应用" class="headerlink" title="4.应用"></a>4.应用</h2><h4 id="声音"><a href="#声音" class="headerlink" title="- 声音"></a>- 声音</h4><p>通过分析频率域，可以分析出低频可能是男生说话，高频可能是女生说话，再高的频率就是噪音了，除去这些高频信号，然后通过逆变换就可以得到处理后的音频。</p>
+<p>在声音中，那刚才的傅里叶变换之前的x轴就是时间，y轴就是声音的振幅</p>
+<p>如下图（copy from 知乎Heinrich）</p>
+<p><img src="/Users/star/Desktop/%E5%82%85%E9%87%8C%E5%8F%B6.jpg" class="lazyload" data-srcset="/Users/star/Desktop/%E5%82%85%E9%87%8C%E5%8F%B6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h4 id="图像"><a href="#图像" class="headerlink" title="- 图像"></a>- 图像</h4><p>通过分析频率域，他的低频部分可能就是画像的主体部分，高频部分可能是图像中的噪点，比如说是画面中的斑点噪音，旧照片中的斑点，通过去掉高频信号，然后逆变换回去，就得到去除噪点之后的图像。</p>
+<p>在图像中，傅里叶变换之前的x轴就是图像的空间坐标位置，y轴就是他的灰度？？？</p>
+<h2 id="5-OpenCV-，Numpy中的操作一下"><a href="#5-OpenCV-，Numpy中的操作一下" class="headerlink" title="5.OpenCV ，Numpy中的操作一下"></a>5.OpenCV ，Numpy中的操作一下</h2><h4 id="numpy中操作"><a href="#numpy中操作" class="headerlink" title="-numpy中操作"></a>-numpy中操作</h4><ol>
+<li><p>np.fft.fft2</p>
+<p>实现傅里叶变换并且返回一个复数数组</p>
+</li>
+<li><p>np.fft.fftshift</p>
+<p>将零频率分量移动到频谱的中心</p>
+</li>
+<li><p>np.log（np.abs(fshift)）</p>
+<p>刚才返回的复数数组没办法用图像的形式展示出来需要用以上函数转换到[0, 255]范围</p>
+</li>
+<li><p>np.fft.ifftshift</p>
+<p>把中心化的频谱再移动回左上角</p>
+</li>
+<li><p>np.fft.ifft2</p>
+<p>实现逆变换，返回一个复数数组</p>
+</li>
+<li><p>np.abs（逆傅里叶变换的结果）</p>
+</li>
+</ol>
+<p>​        变回能显示的[0, 255]的可显示图像</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 直接读为灰度图像</span></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;你电脑本地的图像路径&#x27;</span>, <span class="number">0</span>)  </span><br><span class="line">f = np.fft.fft2(img)</span><br><span class="line">fshift = np.fft.fftshift(f)</span><br><span class="line"><span class="comment"># 取绝对值：将复数变化成实数</span></span><br><span class="line"><span class="comment"># 取对数的目的为了将数据变化到0-255</span></span><br><span class="line">s1 = np.log(np.<span class="built_in">abs</span>(fshift))</span><br><span class="line">plt.subplot(<span class="number">131</span>), plt.imshow(img, cmap=<span class="string">&#x27;gray&#x27;</span>, interpolation=<span class="string">&#x27;bicubic&#x27;</span>), plt.title(<span class="string">&#x27;original&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.subplot(<span class="number">132</span>), plt.imshow(s1, <span class="string">&#x27;gray&#x27;</span>, interpolation=<span class="string">&#x27;bicubic&#x27;</span>), plt.title(<span class="string">&#x27;center&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line"><span class="comment"># 逆变换</span></span><br><span class="line">f1shift = np.fft.ifftshift(fshift)</span><br><span class="line">img_back = np.fft.ifft2(f1shift)</span><br><span class="line"><span class="comment"># 出来的是复数，无法显示</span></span><br><span class="line">img_back = np.<span class="built_in">abs</span>(img_back)</span><br><span class="line">plt.subplot(<span class="number">133</span>), plt.imshow(img_back, cmap=<span class="string">&#x27;gray&#x27;</span>, interpolation=<span class="string">&#x27;bicubic&#x27;</span>), plt.title(<span class="string">&#x27;img back&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="OpenCV中操作"><a href="#OpenCV中操作" class="headerlink" title="OpenCV中操作"></a>OpenCV中操作</h4><ol>
+<li><p>返回结果 = cv2.dft(原始图像， 转换标识)</p>
+<p>返回结果是双通道的，第一通道是结果的实数部分，第二通道是虚数部分</p>
+<p>原始图像一般是整型八位位图，要转换成32位的（np.float32(img)）</p>
+<p>转换标识一般flags = cv2.DFT_COMPLEX_OUTPUT,输出一个复数阵列</p>
+</li>
+<li><p>np.fft.fftshift</p>
+<p>将零频率分量转换频谱中心</p>
+</li>
+<li><p>返回值 =  cv2.magnitude（参数1，参数2）</p>
+<p>参数1：浮点的X坐标，也就是实部</p>
+<p>参数2：浮点的Y坐标，也就是虚部</p>
+<p>通过这个函数，将那个复数转换到[0, 255]</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;电脑本地的图像地址&#x27;</span>， <span class="number">0</span>)</span><br><span class="line">dft = cv2.dft(np.float32(img), flags = cv2.DFT_COMPLEX_OUTPUT)</span><br><span class="line">dftshift = np.fft.fftshift(dft)</span><br><span class="line">result = <span class="number">20</span>*np.log(cv2.magnitude(dftshift[:,:,<span class="number">0</span>], dftshift[:,:,<span class="number">1</span>]))</span><br><span class="line">ishift = np.fft.ifftshift(dftshift)</span><br><span class="line">iimg = cv2.idft(ishift)</span><br><span class="line">iimg = cv2.magnitude(iimg[:, :, <span class="number">0</span>], iimg[:, :, <span class="number">1</span>])</span><br><span class="line">plt.subplot(<span class="number">221</span>), plt.imshow(img,<span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;img&#x27;</span>), plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.subplot(<span class="number">222</span>), plt.imshow(result,<span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;result&#x27;</span>), plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.subplot(<span class="number">223</span>), plt.imshow(img, <span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;img&#x27;</span>), plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.subplot(<span class="number">224</span>), plt.imshow(iimg, <span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;result&#x27;</span>), plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="低通滤波"><a href="#低通滤波" class="headerlink" title="低通滤波"></a>低通滤波</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;/Users/star/learning_python/picture/2.png&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">dft = cv2.dft(np.float32(img), flags=cv2.DFT_COMPLEX_OUTPUT)</span><br><span class="line">dshift = np.fft.fftshift(dft)</span><br><span class="line">rows, cols = img.shape</span><br><span class="line">row, col = <span class="built_in">int</span>(rows/<span class="number">2</span>), <span class="built_in">int</span>(cols/<span class="number">2</span>)</span><br><span class="line">mask = np.zeros((rows, cols, <span class="number">2</span>), np.uint8)</span><br><span class="line">mask[row-<span class="number">50</span>:row+<span class="number">50</span>, col-<span class="number">50</span>:col+<span class="number">50</span>] = <span class="number">1</span></span><br><span class="line">dst = dshift * mask</span><br><span class="line">idst = np.fft.ifftshift(dst)</span><br><span class="line">ishift = cv2.idft(idst)</span><br><span class="line">idst = cv2.magnitude(ishift[:, :, <span class="number">0</span>], ishift[:, :, <span class="number">1</span>])</span><br><span class="line">plt.subplot(<span class="number">121</span>), plt.imshow(img, <span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;img&#x27;</span>), plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.subplot(<span class="number">122</span>), plt.imshow(idst, <span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;img&#x27;</span>), plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="高通滤波"><a href="#高通滤波" class="headerlink" title="高通滤波"></a>高通滤波</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;电脑本地的图像地址&#x27;</span>， <span class="number">0</span>)</span><br><span class="line">f = np.fft.fft2(img)</span><br><span class="line">fshift = np.fft.fftshift(f)		</span><br><span class="line">rows,cols = img.shape[:<span class="number">2</span>]</span><br><span class="line">crow,ccol = <span class="built_in">int</span>(rows/<span class="number">2</span>), <span class="built_in">int</span>(cols/<span class="number">2</span>)</span><br><span class="line">fshift[crow-<span class="number">30</span>:crow+<span class="number">30</span>, ccol-<span class="number">30</span>:ccol+<span class="number">30</span>] = <span class="number">0</span></span><br><span class="line">ishift = np.fft.ifftshift(fshift)</span><br><span class="line">iimg = np.fft.ifft2(ishift)</span><br><span class="line">iimg = np.<span class="built_in">abs</span>(iimg)</span><br><span class="line">plt.subplot(<span class="number">121</span>),plt.imshow(img, <span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;img&#x27;</span>),plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.subplot(<span class="number">122</span>),plt.imshow(iimg, <span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;iimg&#x27;</span>),plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/' itemprop="url">
-            Read More
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-05T16:54:05+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Apr 5, 2022</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/图像处理：gabor与小波变换/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>图像处理</p></a></div>
+  <span hidden itemprop="keywords">图像处理</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换 - 星云小站&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换 - 星云小站&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换 - 星云小站&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>图像分割</p>
+          <p class='content'>
+我对图像分割的初级认识（现在的图像分割基本概况）
+
+
+
+一、图像分割分类按着先进程度分
+传统分割方法
+
+①阈值分割
+
+阈值法的基本思想是基于图像的灰度特征来计算一个或多个灰度阈值，并将图像中每...</p>
+        </a>
+      
+      
+        <a class='next' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/'>
+          <p class='title'>gabor变换<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>傅里叶变换的缺点如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/"  itemprop="url">
-        gabor变换
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        傅里叶变换的缺点如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻的频域特征都很重要，但是由于傅里叶变换不具有局部性，不能将时频两域完全分离。
-其实根本原因是傅里叶变换的三角基是全域性的，其局部化性质不好，因而只能得到信号的整个频谱，难以在任何有限频段上确定任意小范...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/人效计算/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/"  itemprop="url">
-        Sep 9, 2022
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        人效计算1、工作饱和度预估工时/人天工时
-2、加班强度出勤工时（实际签到的小时数）/人天工时（一周不加班上的小时数）
-3、效率预估工时/消耗工时
-4、人效比上面三个求平均数
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/tensorflow3/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/tensorflow3/"  itemprop="url">
-        tensorflow第三节
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>理论知识以及相关概念</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/TensorFlow/">TensorFlow</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/TensorFlow/" itemprop="url"><span itemprop="name">TensorFlow</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/tensorflow3/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 2
-        </p>
-        
-          <a class="next" rel="next" href="/archives/2022/09/page/2/">
-            <section class="post next white-box shadow floatable blur">
-              &nbsp;Next&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3147,149 +2777,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">星云小站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/TensorFlow/" href="/categories/TensorFlow/"
-            active-action="action-categoriesTensorFlow"
-            ><div class='name'>TensorFlow</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/java/" href="/categories/java/"
-            active-action="action-categoriesjava"
-            ><div class='name'>java</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/matlab/" href="/categories/matlab/"
-            active-action="action-categoriesmatlab"
-            ><div class='name'>matlab</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"
-            active-action="action-categoriesE59BBEE5838FE5A484E79086"
-            ><div class='name'>图像处理</div><div class='badge'>(4)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/TensorFlow/" style="font-size: 24px; color: #555">TensorFlow</a> <a href="/tags/java/" style="font-size: 14px; color: #999">java</a> <a href="/tags/matlab/" style="font-size: 17.33px; color: #828282">matlab</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 20.67px; color: #6c6c6c">图像处理</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">1.傅里叶变换的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0"><span class="toc-text">2.傅里叶级数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-text">3.傅里叶变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%BA%94%E7%94%A8"><span class="toc-text">4.应用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A3%B0%E9%9F%B3"><span class="toc-text">- 声音</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F"><span class="toc-text">- 图像</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-OpenCV-%EF%BC%8CNumpy%E4%B8%AD%E7%9A%84%E6%93%8D%E4%BD%9C%E4%B8%80%E4%B8%8B"><span class="toc-text">5.OpenCV ，Numpy中的操作一下</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#numpy%E4%B8%AD%E6%93%8D%E4%BD%9C"><span class="toc-text">-numpy中操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OpenCV%E4%B8%AD%E6%93%8D%E4%BD%9C"><span class="toc-text">OpenCV中操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8E%E9%80%9A%E6%BB%A4%E6%B3%A2"><span class="toc-text">低通滤波</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AB%98%E9%80%9A%E6%BB%A4%E6%B3%A2"><span class="toc-text">高通滤波</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3317,13 +2846,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3332,14 +2862,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3885,7 +3415,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://starlit.com/","name":"星云小站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://starlit.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://starlit.com/archives/2022/","name":"2022"}},{"@type":"ListItem","position":4,"item":{"@id":"http://starlit.com/archives/2022/9/","name":"9"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"星云小站","url":"http://starlit.com/","keywords":null,"description":"个人博客","author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","description":"个人博客"},"publisher":{"@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://starlit.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://starlit.com/","name":"星云小站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://starlit.com/categories/图像处理/","name":"图像处理"}},{"@type":"ListItem","position":3,"item":{"@id":"http://starlit.com/2022/09/09/图像处理：傅里叶变换/","name":"傅里叶变换"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"星云小站","url":"http://starlit.com/","keywords":null,"description":"个人博客","author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","description":"个人博客"},"publisher":{"@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://starlit.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"傅里叶变换","description":"个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"},"author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/","wordCount":0,"datePublished":"2022-09-09T14:44:27.650Z","dateModified":"2022-04-05T08:54:05.250Z","articleSection":"图像处理","keywords":"图像处理","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

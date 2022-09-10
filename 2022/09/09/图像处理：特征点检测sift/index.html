@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://starlit.com/archives/2022/09/"/>
+  
+  <link rel="canonical" href="http://starlit.com/2022/09/09/图像处理：特征点检测sift/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,18 +32,23 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2022/9 - 星云小站</title>
-  <meta name="keywords" content="null">
-  <meta desc name="description" content="个人博客 - star - 星云小站">
+  <title>理解边缘检测sift - 星云小站</title>
+  <meta name="keywords" content="图像处理,null">
+  <meta desc name="description" content="
+图像处理——sift理解
+ - star - 星云小站">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="星云小站">
-<meta property="og:url" content="http://starlit.com/archives/2022/09/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解边缘检测sift">
+<meta property="og:url" content="http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/index.html">
 <meta property="og:site_name" content="星云小站">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="图像处理——sift理解">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-09-09T14:44:27.654Z">
+<meta property="article:modified_time" content="2022-04-05T08:54:20.544Z">
 <meta property="article:author" content="star">
+<meta property="article:tag" content="图像处理">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2127,7 +2132,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2396,7 +2401,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2473,276 +2478,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/10/新建一个webhook/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/10/%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AAwebhook/"  itemprop="url">
-        Sep 10, 2022
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        新建一个webhook用于测试本地hexo部署之后服务器会不会同步
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-10T14:10:31+08:00">2022-09-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/10/%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AAwebhook/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/破解成功/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E7%A0%B4%E8%A7%A3%E6%88%90%E5%8A%9F/"  itemprop="url">
-        Sep 9, 2022
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        破解成功1、test-12、Test-2
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E7%A0%B4%E8%A7%A3%E6%88%90%E5%8A%9F/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/用tf.keras搭建网络八股/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E7%94%A8tf.keras%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%85%AB%E8%82%A1/"  itemprop="url">
-        tensorflow第四节
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>八股六步法搭建网络结构</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/TensorFlow/">TensorFlow</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/TensorFlow/" itemprop="url"><span itemprop="name">TensorFlow</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E7%94%A8tf.keras%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%85%AB%E8%82%A1/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/图像处理：自制数据集/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/"  itemprop="url">
-        自制神经网络数据集
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>将自己领域的数据生成数据包导入神经网络</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/TensorFlow/">TensorFlow</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/TensorFlow/" itemprop="url"><span itemprop="name">TensorFlow</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/图像处理：特征点检测sift/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="星云小站">
@@ -2752,393 +2488,349 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="个人博客">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         理解边缘检测sift
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
     
-      <blockquote>
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 9, 2022</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <blockquote>
 <p>图像处理——sift理解</p>
 </blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
+<span id="more"></span>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/图像处理：图像分割/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"  itemprop="url">
-        图像分割
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>我对图像分割的初级认识（现在的图像分割基本概况）</p>
+<h3 id="通俗的大致理解"><a href="#通俗的大致理解" class="headerlink" title="通俗的大致理解"></a>通俗的大致理解</h3><ol>
+<li><p>首先，理解同一幅<strong>图像在不同的空间中有不同的表达方式</strong>。比如在RGB空间中，图像中的像素点可以用颜色值(r,g,b)来表示；在灰度空间中，图像中的像素点可以用灰度值来表示。类似的，你可以把梯度图像认为是图像在<strong>梯度空间</strong>中的一种表达，图像中的像素点可以<strong>用梯度方向</strong>来表示，即，梯度图像中的像素点表达的是该点的梯度方向（而不是灰度值/颜色值）。</p>
+</li>
+<li><p>其次，理解图像的<strong>灰度直方图是什么</strong>。图像的灰度直方图就是把<strong>灰度图像中灰度值分别为0,1,…,255的像素的个数统计起来</strong>，得到的一个一维向量。类似的，图像的梯度直方图就是把<strong>梯度图像中梯度方向分别为0°到360°的像素的个数统计起来</strong>，得到一个一维向量。</p>
+</li>
+</ol>
+<p>SIFT是什么？简单来说就是图像中某个局部区域（如16*16像素的一个区域）对应的梯度直方图，这就是最简单直观的理解。当然，SIFT还包括各种细节，如量化，尺度金字塔、旋转不变性、局部归一化等，这些东西很多博客上都有“教科书般”的介绍。</p>
+<p>SURF是什么？SURF本身不是什么新的descriptor，而是对SIFT实现上的加速，核心点在于采用<strong>积分图</strong>对计算加速。</p>
+<p>作者：大道至简知不语<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/40736560/answer/358547318">https://www.zhihu.com/question/40736560/answer/358547318</a><br>来源：知乎</p>
+<p><strong>知识点：积分图</strong></p>
+<h3 id="sift深度剖析"><a href="#sift深度剖析" class="headerlink" title="sift深度剖析"></a>sift深度剖析</h3><h4 id="1、明确学习目的"><a href="#1、明确学习目的" class="headerlink" title="1、明确学习目的"></a>1、明确学习目的</h4><p>不管是Harris还是Shi-Tomas，角点检测检测即便做得再优化，也总是有不可克服的缺点：</p>
+<ul>
+<li><strong>对尺度很敏感，不具有尺度不变性</strong></li>
+<li><strong>需要设计角点匹配算法</strong></li>
+</ul>
+<p>而SIFT算法是一种基于局部兴趣点的算法，因此</p>
+<ul>
+<li><strong>不仅对图片大小和旋转不敏感</strong></li>
+<li><strong>而且对光照、噪声等影响的抗击能力也非常优秀</strong></li>
+</ul>
+<p>因此，该算法在性能和适用范围方面较于之前的算法有着质的改变。</p>
+<p>在学习sift算法之前，我们先得搞明白这个算法目的是为了干什么，无非就是找到图像中的特征点，找到优质的特征点。</p>
+<p>优质的特征点有什么特征呢？</p>
+<ul>
+<li><strong>尺度不变性：</strong>人类在识别一个物体时，不管这个物体或远或近，都能对它进行正确的辨认，这就是所谓的尺度不变性。</li>
+</ul>
+<p><img src="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/cat_scale.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/cat_scale.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<ul>
+<li><strong>旋转不变性：</strong>当这个物体发生旋转时，我们照样可以正确地辨认它，这就是所谓的旋转不变性。</li>
+</ul>
+<p><img src="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/cat_direct.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/cat_direct.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h4 id="2、sift过程"><a href="#2、sift过程" class="headerlink" title="2、sift过程"></a>2、sift过程</h4><h5 id="构建多尺度的高斯金字塔"><a href="#构建多尺度的高斯金字塔" class="headerlink" title="构建多尺度的高斯金字塔"></a>构建多尺度的高斯金字塔</h5><blockquote>
+<p>①构建单尺度的空间，单尺度空间有6张图，六张图分别是经过方差大小不同的高斯滤波处理的图</p>
 </blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/图像处理：傅里叶变换/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"  itemprop="url">
-        傅里叶变换
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1.傅里叶变换的理解傅里叶变换的相关数学公式目前还没有搞懂，先不整那个东西，我们主要是研究傅里叶变换的一些思想和应用。这个思想起源于牛顿研究那个三棱镜，白光透过棱镜之后会被分解为七种颜色的光，这些光叠加又能形成白光，所以说可以把一种事物分解成好几种事物的加和。
-后来傅里叶就提出了傅里叶级数，一个等幅度不同频或者等频不同幅的波形可以由一组正弦波余弦波的加和得到（原话：任何连续周期信号可以由一组...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/图像处理：gabor与小波变换/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/"  itemprop="url">
-        gabor变换
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        傅里叶变换的缺点如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻的频域特征都很重要，但是由于傅里叶变换不具有局部性，不能将时频两域完全分离。
-其实根本原因是傅里叶变换的三角基是全域性的，其局部化性质不好，因而只能得到信号的整个频谱，难以在任何有限频段上确定任意小范...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">图像处理</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url"><span itemprop="name">图像处理</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/人效计算/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/"  itemprop="url">
-        Sep 9, 2022
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        人效计算1、工作饱和度预估工时/人天工时
-2、加班强度出勤工时（实际签到的小时数）/人天工时（一周不加班上的小时数）
-3、效率预估工时/消耗工时
-4、人效比上面三个求平均数
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/tensorflow3/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="星云小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="星云小站">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/tensorflow3/"  itemprop="url">
-        tensorflow第三节
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>理论知识以及相关概念</p>
+<blockquote>
+<p>②然后对同一尺度的一组照片中的相邻滤波处理的照片做差得到的就是图像的轮廓，轮廓就是我们要得到的最基本的特征。做差得出的图像就叫做DoG。</p>
 </blockquote>
-    
+<blockquote>
+<p>③然后再分成多个尺度，小尺度是通过上一层大尺度的第三张照片作为原图再次进行高斯滤波得到的。这一步就是要解决尺度的问题：构建金字塔，将特征值拓展到多分辨率上。</p>
+<p><em><strong>我的疑惑点：这么多尺度的图像他是怎样提取不同尺度的图像，然后融合在一起的</strong></em></p>
+</blockquote>
+<h5 id="检测尺度空间的极值点"><a href="#检测尺度空间的极值点" class="headerlink" title="检测尺度空间的极值点"></a>检测尺度空间的极值点</h5><blockquote>
+<p>直接遍历找出极值点，极值点不但要根这个点周围的八个点比较，还要跟同一层相邻的另外两张图像作比较。一共比较26个点。注意做完这一步之后，应该就可以在原图上画出来极值点坐标了示意图了。</p>
+</blockquote>
+<h5 id="精确定位极值点"><a href="#精确定位极值点" class="headerlink" title="精确定位极值点"></a>精确定位极值点</h5><blockquote>
+<p>上一步我们已经找到了相关的特征点的大致坐标，接下来就要确定他们的准确位置，这里牵涉到很多数学运算。</p>
+</blockquote>
+<p><img src="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/jingqueweizhi.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/jingqueweizhi.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h5 id="选取特征点的方向"><a href="#选取特征点的方向" class="headerlink" title="选取特征点的方向"></a>选取特征点的方向</h5><blockquote>
+<p>对我们已经用金字塔解决了尺度不变性问题，下面就要通过确定特征点的方向来解决旋转不变性问题。完成关键点的梯度计算后，使用直方图统计邻域内像素的梯度和方向。梯度直方图将0~360度的方向范围分为36个柱(bins)，其中每柱10度。如图所示，直方图的峰值方向代表了关键点的主方向，(为简化，图中只画了八个方向的直方图)。</p>
+</blockquote>
+<p><img src="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/direction.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/direction.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<blockquote>
+<p><strong>直方图的峰值则代表了该关键点处邻域梯度的主方向，即作为该关键点的方向；其他的达到最大值80%的方向可作为辅助方向。</strong>到这里我们已经检测出的含有位置、尺度和方向的关键点即是该图像的SIFT特征点。</p>
+</blockquote>
+<h5 id="生成关键描述子"><a href="#生成关键描述子" class="headerlink" title="生成关键描述子"></a>生成关键描述子</h5><p>到这里还没有结束</p>
+<p>金字塔保证特征点的空间不变性， 严格删选保证了特征点的准确性， 方向信息保证了特征点的旋转不变性。我们如何把所有信息作为属性附加给关键点呢？</p>
+<p>①为什么要添加描述子：通过上面的步骤，对于每一个关键点，拥有三个信息：<strong>位置、尺度以及方向</strong>。接下来就是为每个关键点建立一个描述符，用一组向量将这个关键点描述出来，使其不随各种变化而改变，比如光照变化、视角变化等等。这个描述子不但包括关键点，也包含关键点周围对其有贡献的像素点，并且描述符应该有较高的独特性，以便于提高特征点正确匹配的概率。</p>
+<p>②添加过程：<strong>1) 确定计算描述子所需的图像区域</strong>特征描述子与特征点所在的尺度有关，因此，对梯度的求取应在特征点对应的高斯图像上进行。将关键点附近的邻域划分为d*d(Lowe建议d=4)个子区域，每个子区域做为一个种子点，每个种子点有8个方向。每个子区域的大小与关键点方向分配时相同。</p>
+<p><img src="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/miaoshuziimg.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/miaoshuziimg.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>以关键点为中心，4*4格为一个种子点，每个种子点8个方向。</p>
+<p>每一个小格都代表了特征点邻域所在的尺度空间的一个像素 ，箭头方向代表了像素梯度方向，箭头长度代表该像素的幅值。然后在4×4的窗口内计算8个方向的梯度方向直方图。绘制每个梯度方向的累加可形成一个种子点。</p>
+<ul>
+<li><strong>2) 将坐标轴旋转为关键点的方向，以确保旋转不变性</strong></li>
+</ul>
+<p><img src="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/xuanzhuanxy.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/xuanzhuanxy.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<ul>
+<li><strong>3) 将邻域内的采样点分配到对应的子区域内，将子区域内的梯度值分配到8个方向上，计算其权值</strong></li>
+</ul>
+<p><img src="https://www.zhihu.com/equation?tex=w=m(a+x,+b+y)+*+e%5E%7B-%5Cfrac%7B%5Cleft(x%5E%7B%5Cprime%7D%5Cright)%5E%7B2%7D+%5Cleft(y%5E%7B%5Cprime%7D%5Cright)%5E%7B2%7D%7D%7B2+%5Ctimes(0.5+d)%5E%7B2%7D%7D%7D" class="lazyload" data-srcset="https://www.zhihu.com/equation?tex=w=m(a+x,+b+y)+*+e%5E%7B-%5Cfrac%7B%5Cleft(x%5E%7B%5Cprime%7D%5Cright)%5E%7B2%7D+%5Cleft(y%5E%7B%5Cprime%7D%5Cright)%5E%7B2%7D%7D%7B2+%5Ctimes(0.5+d)%5E%7B2%7D%7D%7D" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="[公式]"></p>
+<p>其中a，b为关键点在高斯金字塔图像中的位置坐标。</p>
+<ul>
+<li><strong>4) 插值计算每个种子点八个方向的梯度</strong></li>
+</ul>
+<p><img src="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/zhongzitidu.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/zhongzitidu.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<ul>
+<li><strong>5) 归一化</strong></li>
+</ul>
+<p>如上统计的4<em>4</em>8=128个梯度信息即为该关键点的特征向量。特征向量形成后，为了去除光照变化的影响，需要对它们进行归一化处理，对于图像灰度值整体漂移，图像各点的梯度是邻域像素相减得到，所以也能去除。</p>
+<ul>
+<li><strong>6） 向量门限</strong></li>
+</ul>
+<p>描述子向量门限。非线性光照，相机饱和度变化对造成某些方向的梯度值过大，而对方向的影响微弱。因此设置门限值(向量归一化后，一般取0.2)截断较大的梯度值。然后，再进行一次归一化处理，提高特征的鉴别性。</p>
+<ul>
+<li><strong>7） 排序</strong></li>
+</ul>
+<p>按特征点的尺度对特征描述向量进行排序。</p>
+<p><img src="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/paixu.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/paixu.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>在每个4<em>4的1/16象限中，通过加权梯度值加到直方图8个方向区间中的一个，计算出一个梯度方向直方图。这样就可以对每个feature形成一个4</em>4<em>8=128维的描述子，每一维都可以表示4</em>4个格子中一个的scale/orientation. 将这个向量归一化之后，就进一步去除了光照的影响。</p>
+<h4 id="3-sift怎么匹配"><a href="#3-sift怎么匹配" class="headerlink" title="3.sift怎么匹配"></a>3.sift怎么匹配</h4><p><strong>1、 首先还是要对图片生成特征点</strong></p>
+<p>一张图经过SIFT算法后，会得到多个特征点，每个特征点有128维的描述子属性。那么，匹配特征点都简单多啦！</p>
+<p>生成了A、B两幅图的描述子，（分别是k1<em>128维和k2</em>128维），就将两图中各个scale（所有scale）的描述子进行匹配，匹配上128维即可表示两个特征点match上了。</p>
+<p><strong>2、 然后考虑怎么匹配</strong></p>
+<p>当两幅图像的SIFT特征向量生成后，下一步我们采用关键点特征向量的欧式距离来作为两幅图像中关键点的相似性判定度量。取图像1中的某个关键点，并找出其与图像2中欧式距离最近的前两个关键点，在这两个关键点中，如果最近的距离除以次近的距离少于某个比例阈值，则接受这一对匹配点。降低这个比例阈值，SIFT匹配点数目会减少，但更加稳定。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/xfeatures2d.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv::xfeatures2d;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>** argv)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	Mat cat = <span class="built_in">imread</span>(<span class="string">&quot;cat.png&quot;</span>);</span><br><span class="line">	Mat smallCat = <span class="built_in">imread</span>(<span class="string">&quot;smallCat.png&quot;</span>);</span><br><span class="line">	<span class="built_in">imshow</span>(<span class="string">&quot;cat image&quot;</span>, cat);</span><br><span class="line">	<span class="built_in">imshow</span>(<span class="string">&quot;smallCat image&quot;</span>, smallCat);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">auto</span> detector = SIFT::<span class="built_in">create</span>();</span><br><span class="line">	vector&lt;KeyPoint&gt; keypoints_cat, keypoints_smallCat;</span><br><span class="line">	Mat descriptor_cat, descriptor_smallCat;</span><br><span class="line">	detector-&gt;<span class="built_in">detectAndCompute</span>(cat, <span class="built_in">Mat</span>(), keypoints_cat, descriptor_cat);</span><br><span class="line">	detector-&gt;<span class="built_in">detectAndCompute</span>(smallCat, <span class="built_in">Mat</span>(), keypoints_smallCat, descriptor_smallCat);</span><br><span class="line"></span><br><span class="line">	Ptr&lt;FlannBasedMatcher&gt; matcher = FlannBasedMatcher::<span class="built_in">create</span>();</span><br><span class="line">	vector&lt;DMatch&gt; matches;</span><br><span class="line">	matcher-&gt;<span class="built_in">match</span>(descriptor_cat, descriptor_smallCat, matches);</span><br><span class="line">	Mat dst;</span><br><span class="line">	<span class="built_in">drawMatches</span>(cat, keypoints_cat, smallCat, keypoints_smallCat, matches, dst);</span><br><span class="line">	<span class="built_in">imshow</span>(<span class="string">&quot;match-demo&quot;</span>, dst);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">waitKey</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="https://picb.zhimg.com/80/v2-295c77fc626560a0421be89e19516d6d_720w.jpg" class="lazyload" data-srcset="https://picb.zhimg.com/80/v2-295c77fc626560a0421be89e19516d6d_720w.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img src="https://pic4.zhimg.com/80/v2-aac36afb03c30320918b8d3d9f7f986a_720w.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-aac36afb03c30320918b8d3d9f7f986a_720w.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-799a944fce5797047a6e8a18fb624d2e_720w.jpg" class="lazyload" data-srcset="https://pic1.zhimg.com/80/v2-799a944fce5797047a6e8a18fb624d2e_720w.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p>作者: lowkeyway</p>
+<p>转载自: <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/90122194">https://zhuanlan.zhihu.com/p/90122194</a></p>
+
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T22:44:27+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/TensorFlow/">TensorFlow</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/TensorFlow/" itemprop="url"><span itemprop="name">TensorFlow</span></a>
-            </span>
-          
-        
-      </div>
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2022/09/09/tensorflow3/' itemprop="url">
-            Read More
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-05T16:54:20+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Apr 5, 2022</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>图像处理</p></a></div>
+  <span hidden itemprop="keywords">图像处理</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 2
-        </p>
-        
-          <a class="next" rel="next" href="/archives/2022/09/page/2/">
-            <section class="post next white-box shadow floatable blur">
-              &nbsp;Next&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/&title=理解边缘检测sift - 星云小站&summary=
+图像处理——sift理解
+"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
     
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/&title=理解边缘检测sift - 星云小站&summary=
+图像处理——sift理解
+"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/&title=理解边缘检测sift - 星云小站&summary=
+图像处理——sift理解
+"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E8%87%AA%E5%88%B6%E6%95%B0%E6%8D%AE%E9%9B%86/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>自制神经网络数据集</p>
+          <p class='content'>
+将自己领域的数据生成数据包导入神经网络
+
+
+
+自制数据集并应用在曹健老师的视频课程中有两种读入数据集的方法，一种是在线下载直接调用；一种是在本地自制数据集，用于自己本领域的数据处理。
+首先简单...</p>
+        </a>
+      
+      
+        <a class='next' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/'>
+          <p class='title'>图像分割<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+我对图像分割的初级认识（现在的图像分割基本概况）
+
+
+
+一、图像分割分类按着先进程度分
+传统分割方法
+
+①阈值分割
+
+阈值法的基本思想是基于图像的灰度特征来计算一个或多个灰度阈值，并将图像中每...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
-	
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3147,149 +2839,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">星云小站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/TensorFlow/" href="/categories/TensorFlow/"
-            active-action="action-categoriesTensorFlow"
-            ><div class='name'>TensorFlow</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/java/" href="/categories/java/"
-            active-action="action-categoriesjava"
-            ><div class='name'>java</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/matlab/" href="/categories/matlab/"
-            active-action="action-categoriesmatlab"
-            ><div class='name'>matlab</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"
-            active-action="action-categoriesE59BBEE5838FE5A484E79086"
-            ><div class='name'>图像处理</div><div class='badge'>(4)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/TensorFlow/" style="font-size: 24px; color: #555">TensorFlow</a> <a href="/tags/java/" style="font-size: 14px; color: #999">java</a> <a href="/tags/matlab/" style="font-size: 17.33px; color: #828282">matlab</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 20.67px; color: #6c6c6c">图像处理</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E4%BF%97%E7%9A%84%E5%A4%A7%E8%87%B4%E7%90%86%E8%A7%A3"><span class="toc-text">通俗的大致理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sift%E6%B7%B1%E5%BA%A6%E5%89%96%E6%9E%90"><span class="toc-text">sift深度剖析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E6%98%8E%E7%A1%AE%E5%AD%A6%E4%B9%A0%E7%9B%AE%E7%9A%84"><span class="toc-text">1、明确学习目的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81sift%E8%BF%87%E7%A8%8B"><span class="toc-text">2、sift过程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E5%A4%9A%E5%B0%BA%E5%BA%A6%E7%9A%84%E9%AB%98%E6%96%AF%E9%87%91%E5%AD%97%E5%A1%94"><span class="toc-text">构建多尺度的高斯金字塔</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E5%B0%BA%E5%BA%A6%E7%A9%BA%E9%97%B4%E7%9A%84%E6%9E%81%E5%80%BC%E7%82%B9"><span class="toc-text">检测尺度空间的极值点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B2%BE%E7%A1%AE%E5%AE%9A%E4%BD%8D%E6%9E%81%E5%80%BC%E7%82%B9"><span class="toc-text">精确定位极值点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%89%E5%8F%96%E7%89%B9%E5%BE%81%E7%82%B9%E7%9A%84%E6%96%B9%E5%90%91"><span class="toc-text">选取特征点的方向</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%85%B3%E9%94%AE%E6%8F%8F%E8%BF%B0%E5%AD%90"><span class="toc-text">生成关键描述子</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-sift%E6%80%8E%E4%B9%88%E5%8C%B9%E9%85%8D"><span class="toc-text">3.sift怎么匹配</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3317,13 +2908,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3332,14 +2924,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3885,7 +3477,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://starlit.com/","name":"星云小站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://starlit.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://starlit.com/archives/2022/","name":"2022"}},{"@type":"ListItem","position":4,"item":{"@id":"http://starlit.com/archives/2022/9/","name":"9"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"星云小站","url":"http://starlit.com/","keywords":null,"description":"个人博客","author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","description":"个人博客"},"publisher":{"@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://starlit.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://starlit.com/","name":"星云小站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://starlit.com/categories/图像处理/","name":"图像处理"}},{"@type":"ListItem","position":3,"item":{"@id":"http://starlit.com/2022/09/09/图像处理：特征点检测sift/","name":"理解边缘检测sift"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"星云小站","url":"http://starlit.com/","keywords":null,"description":"个人博客","author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","description":"个人博客"},"publisher":{"@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://starlit.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"理解边缘检测sift","description":"\n图像处理——sift理解\n","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/"},"author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://starlit.com/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9A%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8Bsift/","wordCount":14,"datePublished":"2022-09-09T14:44:27.654Z","dateModified":"2022-04-05T08:54:20.544Z","articleSection":"图像处理","keywords":"图像处理","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
