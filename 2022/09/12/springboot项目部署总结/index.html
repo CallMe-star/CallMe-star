@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://starlit.com/2022/09/09/人效计算/"/>
+  <link rel="canonical" href="http://starlit.com/2022/09/12/springboot项目部署总结/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -38,13 +38,13 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="星云小站">
-<meta property="og:url" content="http://starlit.com/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/index.html">
+<meta property="og:url" content="http://starlit.com/2022/09/12/springboot%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="星云小站">
-<meta property="og:description" content="人效计算1、工作饱和度预估工时&#x2F;人天工时 2、加班强度出勤工时（实际签到的小时数）&#x2F;人天工时（一周不加班上的小时数） 3、效率预估工时&#x2F;消耗工时 4、人效比上面三个求平均数">
+<meta property="og:description" content="springboot项目部署总结1、最重要的是jdk安装下载jdk的linux版本，解压、配置环境 配置环境变量由两个地方 vim ~&#x2F;.bash_profile vim &#x2F;etc&#x2F;profile 刷新配置文件 source ~&#x2F;.bash_profile 2、mysql安装配置数据库导入，最好是本地连接远程服务器，好创建表 1、问题1：修改密码 mysql5.7中，修改密码的方式 use mys">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-09-09T14:44:27.645Z">
-<meta property="article:modified_time" content="2022-07-12T02:58:21.259Z">
+<meta property="article:published_time" content="2022-09-12T08:48:14.675Z">
+<meta property="article:modified_time" content="2022-09-12T08:47:02.736Z">
 <meta property="article:author" content="star">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1711,7 +1711,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1662792071097),
+    lastupdate: new Date(1663653060921),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2162,13 +2162,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="文章"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-rss fa-fw'></i>文章
                 </a>
                 
               </li>
@@ -2283,13 +2283,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="文章"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-rss fa-fw'></i>文章
                 </a>
                 
               </li>
@@ -2428,7 +2428,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-archives">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4f0.svg'><p>文章</p>
             </a>
           
             <a href="/examples/"
@@ -2476,7 +2476,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/09/人效计算/">
+  <link itemprop="mainEntityOfPage" href="http://starlit.com/2022/09/12/springboot项目部署总结/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="星云小站">
   </span>
@@ -2505,10 +2505,114 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h3 id="人效计算"><a href="#人效计算" class="headerlink" title="人效计算"></a>人效计算</h3><h4 id="1、工作饱和度"><a href="#1、工作饱和度" class="headerlink" title="1、工作饱和度"></a>1、工作饱和度</h4><p>预估工时/人天工时</p>
-<h4 id="2、加班强度"><a href="#2、加班强度" class="headerlink" title="2、加班强度"></a>2、加班强度</h4><p>出勤工时（实际签到的小时数）/人天工时（一周不加班上的小时数）</p>
-<h4 id="3、效率"><a href="#3、效率" class="headerlink" title="3、效率"></a>3、效率</h4><p>预估工时/消耗工时</p>
-<h4 id="4、人效比"><a href="#4、人效比" class="headerlink" title="4、人效比"></a>4、人效比</h4><p>上面三个求平均数</p>
+    <h2 id="springboot项目部署总结"><a href="#springboot项目部署总结" class="headerlink" title="springboot项目部署总结"></a>springboot项目部署总结</h2><h3 id="1、最重要的是jdk安装"><a href="#1、最重要的是jdk安装" class="headerlink" title="1、最重要的是jdk安装"></a>1、最重要的是jdk安装</h3><p>下载jdk的linux版本，解压、配置环境</p>
+<p>配置环境变量由两个地方</p>
+<p><code>vim ~/.bash_profile</code></p>
+<p><code>vim /etc/profile</code></p>
+<p>刷新配置文件</p>
+<p><code>source ~/.bash_profile</code></p>
+<h3 id="2、mysql安装配置"><a href="#2、mysql安装配置" class="headerlink" title="2、mysql安装配置"></a>2、mysql安装配置</h3><p>数据库导入，最好是本地连接远程服务器，好创建表</p>
+<p>1、问题1：修改密码</p>
+<p>mysql5.7中，修改密码的方式</p>
+<p>use mysql;<br>update user set authentication_string = password(“root”) where user = “root”;</p>
+<p>mysql8.0中修改密码</p>
+<p>use mysql;<br>update user set authentication_string=’’ where user=’root’;<em>–将字段置为空</em></p>
+<p>ALTER user ‘root‘@’localhost’ IDENTIFIED BY ‘newpassword’;</p>
+<p>2、问题2：进不去数据库mysql -u root -p出现以下报错</p>
+<p>mysql数据库报ERROR 1045 (28000): Access denied for user ‘ODBC‘@’localhost’ (using password: NO)</p>
+<p>①找到配置文件vim /etc/my.ini</p>
+<p>②在[mysqld]后添加skip-grant-tables（登录时跳过权限检查）</p>
+<p>③修改密码</p>
+<p>④flush privileges;刷新数据库的密码信息</p>
+<p>⑤一劳永逸，设置远程访问GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root‘@’%’IDENTIFIED BY ‘Admin123@qwe’ WITH GRANT OPTION;</p>
+<p>⑥sudo systemctl restart mysqld重启数据库</p>
+<h3 id="3、tomcat、maven安装"><a href="#3、tomcat、maven安装" class="headerlink" title="3、tomcat、maven安装"></a>3、tomcat、maven安装</h3><p>太简单，略</p>
+<h3 id="4、redis安装"><a href="#4、redis安装" class="headerlink" title="4、redis安装"></a>4、redis安装</h3><p>1、问题：今天尝试连接redis时，出现了如下的问题：</p>
+<p>Could not connect to Redis at 127.0.0.1:6379: Connection refused</p>
+<p><code>vim redis.conf</code></p>
+<p>用配置文件的配置启动redis</p>
+<p><code>redis-server /opt/redisconfig/redis.conf</code></p>
+<p>命令查看是否在运行</p>
+<p><code>ps -ef|grep redis</code></p>
+<p>客户端连接</p>
+<p><code>redis-cli -p 6379</code></p>
+<h3 id="5、rabbitmq安装"><a href="#5、rabbitmq安装" class="headerlink" title="5、rabbitmq安装"></a>5、rabbitmq安装</h3><h3 id="6、vue环境安装"><a href="#6、vue环境安装" class="headerlink" title="6、vue环境安装"></a>6、vue环境安装</h3><p>1、vue可以直接用项目启动</p>
+<p>npm run dev/npm run serve直接在linux启动这个vue项目</p>
+<p>打开服务器的安全组，打开vue项目的运行端口，即可通过服务器ip：port访问</p>
+<p>2、vue先打包，再把dist文件放入云服务器的文件夹，用niginx访问静态文件</p>
+<p>npm run build生成dist文件夹，把他拷贝到服务器</p>
+<p>3、vue生成的dist文件夹，直接放到springboot的static文件夹下</p>
+<p>打包springboot项目，直接运行jar包，访问后端port直接访问整个项目</p>
+<h3 id="7、nodejs安装"><a href="#7、nodejs安装" class="headerlink" title="7、nodejs安装"></a>7、nodejs安装</h3><h5 id="nvm管理器"><a href="#nvm管理器" class="headerlink" title="nvm管理器"></a>nvm管理器</h5><p>下载压缩包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">wget https://github.com/nvm-sh/nvm/archive/refs/tags/v0.39.1.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>解压</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /.nvm</span><br><span class="line">tar -zxvf nvm-0.39.0.tar.gz -C /.nvm</span><br></pre></td></tr></table></figure>
+
+<p>配置环境</p>
+<p><code>vim ~/.bashrc</code></p>
+<p>在~/.bashrc的末尾，添加如下语句：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm/nvm-0.38.0&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm</span><br><span class="line">[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot;  # This loads nvm bash_completion</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>nvm安装nodev12.18.3</p>
+<p><code>nvm install 12.18.3</code></p>
+<p><code>nvm use 12.18.3</code></p>
+<h5 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h5><p>安装vue需要的相关依赖，依赖会存储在node_module</p>
+<p><code>npm install</code></p>
+<h3 id="8、git相关"><a href="#8、git相关" class="headerlink" title="8、git相关"></a>8、git相关</h3><h5 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h5><ol>
+<li>下载最新的linux版本的git.tar.jz</li>
+<li>解压<code>tar -zxvf git-2.25.4.tar.gz</code></li>
+<li>下载编译环境<code>yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker</code></li>
+<li>编译git源码，进入cd /usr/local/git-2.25.4 目录<code>make prefix=/usr/local/git all</code></li>
+<li>安装git至/usr/bin/git路径<code>make prefix=/usr/local/git install</code></li>
+<li>配置环境变量<code>vi /etc/profile</code></li>
+<li>底部加入<code>export PATH=$PATH:/usr/bin/git/bin</code></li>
+<li>刷新环境变量<code>source /etc/profile</code> </li>
+</ol>
+<h5 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h5><ol>
+<li><p>设置用户名和密码，以后push代码都会显示这些信息</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;star&quot;</span><br><span class="line">git config --global user.email &quot;1024422413@qq.com&quot;</span><br></pre></td></tr></table></figure></li>
+<li><p>还有一个比较常用的是，在解决合并冲突时使用哪种差异分析工具。比如要改用 vimdiff 的话：</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global merge.tool vimdiff</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>要检查已有的配置信息，可以使用 git config –list 命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git config --list</span><br><span class="line">http.postbuffer=2M</span><br><span class="line">user.name=runoob</span><br><span class="line">user.email=test@runoob.com</span><br></pre></td></tr></table></figure></li>
+<li><p>创建ssh-key</p>
+</li>
+</ol>
+<p> <code>ssh-keygen -t rsa -C “1024422413@qq.ccom”</code></p>
+<p>在<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>中找到这个生成的公钥，放到github的配置ssh里面</p>
+<ol start="5">
+<li><p>测试是否配置成功</p>
+<p><code>ssh -T git@github.com</code></p>
+</li>
+</ol>
+<h5 id="git操作命令"><a href="#git操作命令" class="headerlink" title="git操作命令"></a>git操作命令</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">执行git init命令，初始化本地仓库，会创建一个.git的隐藏文件夹。</span><br><span class="line">执行git add .命令，将目录添加入索引</span><br><span class="line">执行 git commit -m &quot;日志&quot;</span><br><span class="line">执行 git remote add origin github远程仓库的链接;</span><br><span class="line">执行git pull origin master从远程仓库获取更新，在2.9.2之后的版本还需要加上--allow-unrelated-histories，否则会pull失败。</span><br><span class="line">执行 git push -u origin master等待结束，提交成功；</span><br><span class="line"></span><br><span class="line">如果代码有冲突</span><br><span class="line">博客更新一般不要求解决冲突</span><br><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master</span><br><span class="line">git pull //可以省略</span><br><span class="line"></span><br><span class="line">解决冲突</span><br><span class="line">git fetch 用于把dev和master代码都拉下来</span><br><span class="line">切换到主分支，拉主分支代码</span><br><span class="line">git checkout master</span><br><span class="line">git pull origin master</span><br><span class="line">拉取dev分支代码（当前分支是master）</span><br><span class="line">git pull origin dev</span><br><span class="line">本地解决冲突代码</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">添加全部的文件，这里为了演示方便，你可以添加具体的文件</span></span><br><span class="line">git add .</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">提交代码到本地仓库</span></span><br><span class="line">git commit -m &#x27;解决冲突&#x27;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">提交代码到线上仓库</span></span><br><span class="line">git push origin master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="9、springboot项目在本机打包"><a href="#9、springboot项目在本机打包" class="headerlink" title="9、springboot项目在本机打包"></a>9、springboot项目在本机打包</h3><ol>
+<li>maven先clean然后package</li>
+<li>如果以上的package打包不成功，可能两个module的项目，有一个项目依赖于另一个，单独打包可能不成功，可以尝试先运行maven compile，然后再执行步骤1</li>
+<li>打包后在文件夹找到jar包，放入linux服务器</li>
+</ol>
+<p>问题1：linux服务器无法运行jar包</p>
+<p>可能是因为pom文件中没有引入<packaging>jar</packaging>，导致jar解压后的jar包中没有package的com.star等相对路径的指向信息</p>
+<h3 id="10、springboot项目在Linux中运行"><a href="#10、springboot项目在Linux中运行" class="headerlink" title="10、springboot项目在Linux中运行"></a>10、springboot项目在Linux中运行</h3><p>1、利用nohup命令后台运行，并指定输出日志的文件，输出日子的文件会自动创建**</p>
+<p><code>nohup java -jar chaodou-admin-1.0.0.jar &gt;./mylog.log &amp;</code></p>
+<p>2、查看日志</p>
+<p><code>查看日志：tail -200f mylog.log</code></p>
+<p>3、查看后台运行多个springboot项目，以及在那个端口（top或者ps aux）</p>
+<p><code>ps -ef|grep java</code></p>
+<p>还一个命令</p>
+<p><code>ps aux | grep &quot;java -jar&quot; | grep -v &quot;grep&quot;</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20190813163114940.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190813163114940.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="在这里插入图片描述"></p>
+<p><code>执行:  kill -9 29623 杀死进程;</code></p>
 
   </div>
   
@@ -2533,10 +2637,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-12T10:58:21+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-12T16:47:02+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 12, 2022</p>
+    <p>更新于：Sep 12, 2022</p>
   </a>
 </div>
 
@@ -2555,7 +2659,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://starlit.com/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/&title= - 星云小站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://starlit.com/2022/09/12/springboot%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%80%BB%E7%BB%93/&title= - 星云小站&summary="
           
           >
           
@@ -2567,7 +2671,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://starlit.com/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/&title= - 星云小站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://starlit.com/2022/09/12/springboot%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%80%BB%E7%BB%93/&title= - 星云小站&summary="
           
           >
           
@@ -2579,7 +2683,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://starlit.com/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/&title= - 星云小站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://starlit.com/2022/09/12/springboot%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%80%BB%E7%BB%93/&title= - 星云小站&summary="
           
           >
           
@@ -2612,39 +2716,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/09/09/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9Agabor%E4%B8%8E%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>gabor变换</p>
-          <p class='content'>傅里叶变换的缺点如对音乐信号，我们常常关心的是什么时候发出什么频率的音符，对地震信号我们关心的是什么空间位置出现什么频率的波，这些信号都是非平稳信号，它们的频域特性随时间变化，所以信号在任一时刻...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/09/09/tensorflow3/'>
-          <p class='title'>tensorflow第三节<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>
-理论知识以及相关概念
-
-
-
-学习目标
-预备知识
-
-神经复杂度
-
-指数衰减学习率
-
-激活函数
-
-损失减数
-
-欠拟合和过拟合
-
-正则化减少过拟合
-
-优化器更新网络参数
-
-
-预备知识
-tf.wher...</p>
+        <a class='next' href='/2022/09/12/hexo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93/'>
+          <p class='title'>Sep 12, 2022<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>hexo静态博客总结1、安装hexo以及安装hexo用于部署的git插件npm install hexo-cli -g
+npm install hexo-deployer-git --save
+...</p>
         </a>
       
     </div>
@@ -2660,7 +2737,7 @@ tf.wher...</p>
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/09/12/springboot%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%80%BB%E7%BB%93/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2702,7 +2779,7 @@ tf.wher...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97"><span class="toc-text">人效计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%B7%A5%E4%BD%9C%E9%A5%B1%E5%92%8C%E5%BA%A6"><span class="toc-text">1、工作饱和度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%8A%A0%E7%8F%AD%E5%BC%BA%E5%BA%A6"><span class="toc-text">2、加班强度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E6%95%88%E7%8E%87"><span class="toc-text">3、效率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E4%BA%BA%E6%95%88%E6%AF%94"><span class="toc-text">4、人效比</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#springboot%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%80%BB%E7%BB%93"><span class="toc-text">springboot项目部署总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E6%98%AFjdk%E5%AE%89%E8%A3%85"><span class="toc-text">1、最重要的是jdk安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81mysql%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE"><span class="toc-text">2、mysql安装配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81tomcat%E3%80%81maven%E5%AE%89%E8%A3%85"><span class="toc-text">3、tomcat、maven安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81redis%E5%AE%89%E8%A3%85"><span class="toc-text">4、redis安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81rabbitmq%E5%AE%89%E8%A3%85"><span class="toc-text">5、rabbitmq安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81vue%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="toc-text">6、vue环境安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81nodejs%E5%AE%89%E8%A3%85"><span class="toc-text">7、nodejs安装</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#nvm%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">nvm管理器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#nodejs"><span class="toc-text">nodejs</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81git%E7%9B%B8%E5%85%B3"><span class="toc-text">8、git相关</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="toc-text">下载安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#git%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="toc-text">git操作命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81springboot%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%AC%E6%9C%BA%E6%89%93%E5%8C%85"><span class="toc-text">9、springboot项目在本机打包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10%E3%80%81springboot%E9%A1%B9%E7%9B%AE%E5%9C%A8Linux%E4%B8%AD%E8%BF%90%E8%A1%8C"><span class="toc-text">10、springboot项目在Linux中运行</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3093,7 +3170,7 @@ tf.wher...</p>
 
 
   <script>
-  let imgs = ["https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing12.jpeg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg","https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg","https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg","https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg","https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing10.jpeg"];
+  let imgs = ["https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg","https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing10.jpeg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg","https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/fengjing12.jpeg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg","https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://gcore.jsdelivr.net/gh/CallMe-star/picbed@master/background1.jpg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3320,7 +3397,7 @@ tf.wher...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://starlit.com/","name":"星云小站"}},{"@type":"ListItem","position":3,"item":{"@id":"http://starlit.com/2022/09/09/人效计算/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"星云小站","url":"http://starlit.com/","keywords":null,"description":"个人博客","author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","description":"个人博客"},"publisher":{"@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://starlit.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://starlit.com/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/"},"author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://starlit.com/2022/09/09/%E4%BA%BA%E6%95%88%E8%AE%A1%E7%AE%97/","wordCount":0,"datePublished":"2022-09-09T14:44:27.645Z","dateModified":"2022-07-12T02:58:21.259Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://starlit.com/","name":"星云小站"}},{"@type":"ListItem","position":3,"item":{"@id":"http://starlit.com/2022/09/12/springboot项目部署总结/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"星云小站","url":"http://starlit.com/","keywords":null,"description":"个人博客","author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/","description":"个人博客"},"publisher":{"@type":"Organization","name":"星云小站","url":"http://starlit.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://starlit.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://starlit.com/2022/09/12/springboot%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%80%BB%E7%BB%93/"},"author":{"@type":"Person","name":"star","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://starlit.com/"},"publisher":{"@type":"Organization","name":"星云小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://starlit.com/2022/09/12/springboot%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%80%BB%E7%BB%93/","wordCount":0,"datePublished":"2022-09-12T08:48:14.675Z","dateModified":"2022-09-12T08:47:02.736Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
